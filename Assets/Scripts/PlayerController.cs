@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Top"))
         {
-            isMovable = false;
+            isMovable = false;            
 
             Vector3 bottomPos = new Vector3(0, -3.5f, 0); 
 
@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.CompareTag("Left"))
         {
-            isMovable = false;
+            isMovable = false;            
 
             Vector3 rightPos = new Vector3(7.5f, 0, 0);
 
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
         {
             isMovable = false;
 
-            Vector3 leftPos = new Vector3(7.5f, 0, 0);
+            Vector3 leftPos = new Vector3(-7.5f, 0, 0);
 
             StartCoroutine(ResetPlayerPosition(leftPos));
         }
@@ -89,6 +89,8 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+
+        roomManagerScript.NextRoom();
         transform.position = playerPos;
 
         fadeController.FadeToScene();

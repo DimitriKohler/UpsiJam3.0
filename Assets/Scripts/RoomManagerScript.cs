@@ -43,6 +43,7 @@ public class RoomManagerScript : MonoBehaviour
             Debug.LogError("Room index out of bounds, return to 0");
         }
 
+        Destroy(CurrentRoomObj);
         SpawnRoom(currentRoomIndex);
     }
 }
