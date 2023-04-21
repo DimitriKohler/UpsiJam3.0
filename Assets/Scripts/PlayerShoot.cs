@@ -7,8 +7,15 @@ public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] GameObject projectile;
     [SerializeField] float timeoutBetweenBullets = 1f;
+    [SerializeField] AudioClip shootingSound; 
 
     bool _alreadyShot = false;
+    AudioSource _audioSource;
+
+    void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -16,6 +23,7 @@ public class PlayerShoot : MonoBehaviour
         {
             Instantiate(projectile, transform.position, transform.rotation);
             StartCoroutine(Timeout(timeoutBetweenBullets));
+            _audioSource.PlayOneShot(shootingSound);
         }
     }
 
