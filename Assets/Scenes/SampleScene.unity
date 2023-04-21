@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 1410376770}
   - component: {fileID: 1410376772}
   - component: {fileID: 1410376773}
+  - component: {fileID: 1410376774}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -463,5 +464,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce7612fccae4e6ab5c2d878d833b862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
+  projectile: {fileID: 6669051060729727770, guid: 82804f77708f6e24bb19cbd6f5748b45, type: 3}
   timeoutBetweenBullets: 1
+--- !u!50 &1410376774
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410376769}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
