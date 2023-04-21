@@ -6,7 +6,7 @@ public class RoomManagerScript : MonoBehaviour
 {
     public GameObject[] roomList;
 
-    private GameObject currentRoomIndex;
+    private int currentRoomIndex;
 
     private GameObject currentRoomObj;
 
@@ -31,5 +31,18 @@ public class RoomManagerScript : MonoBehaviour
     private void SpawnRoom(int roomIndex)
     {
         currentRoomObj = Instantiate(roomList[roomIndex], Vector3.zero, Quaternion.identity);
+    }
+
+    public void NextRoom()
+    {
+        currentRoomIndex += 1;
+
+        if (currentRoomIndex >= roomList.Length)
+        {
+            currentRoomIndex = 0;
+            Debug.LogError("Room index out of bounds, return to 0");
+        }
+
+        SpawnRoom(currentRoomIndex);
     }
 }
