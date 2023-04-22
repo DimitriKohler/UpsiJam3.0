@@ -6,9 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float movementSpeed = 1f;
 
+
     public GameObject roomManager;
     private RoomManagerScript roomManagerScript;
 
+    // Movement components
     private float horizontalMovement;
     private float verticalMovement;
 
@@ -25,28 +27,22 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        horizontalMovement = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;
-        verticalMovement = Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime;
+        horizontalMovement = Input.GetAxis("Horizontal");
+        verticalMovement = Input.GetAxis("Vertical");
     }
 
     // Update is called once per frame
     void FixedUpdate()
-    {         
+    {
+
         if (isMovable)
         {
-            transform.Translate(horizontalMovement, verticalMovement, 0);
+            // https://answers.unity.com/questions/285476/maintain-direction-regardless-of-rotation.html
+            transform.Translate(horizontalMovement * movementSpeed * Time.deltaTime, verticalMovement * movementSpeed * Time.deltaTime, 0, Space.World);
+
         }
     }
-    /*
-    void OnCollisionEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Wall"))
-        {
-            Rigidbody2D rb = GetComponent<Rigidbody2D>();
-            rb.velocity = Vector2.zero;
-        }
-    }
-    */
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Top"))
