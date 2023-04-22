@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 1f;
     public int lives = 3;
-    //public GameObject livesUI;
     public float immunityInSeconds;
     private bool isImmune = false;
-
+    [SerializeField] private GameObject livesUI;
+    [SerializeField] private GameObject heart;
+    [SerializeField] private string gameLostScene;
 
     public GameObject roomManager;
     private RoomManagerScript roomManagerScript;
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private float verticalMovement;
 
     private bool isMovable = true;
+    private bool isReseting = false;
 
     private FadeController fadeController;
     private AudioSource _walkingAudioSource;
@@ -26,8 +29,7 @@ public class PlayerController : MonoBehaviour
     private AudioSource _hurtAudioSource;
     private Collider2D _collider;
     private readonly Stack<GameObject> _hearts = new Stack<GameObject>();
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +40,11 @@ public class PlayerController : MonoBehaviour
         _collider = GetComponents<Collider2D>()[0];
         _animator = GetComponentInChildren<Animator>();
 
-
-        /*foreach (Transform heartTransform in livesUI.transform)
+        // Display as many hearts as there are lives
+        for (int i = 0; i < lives; i++)
         {
-            _hearts.Push(heartTransform.gameObject);
-        }*/
+            _hearts.Push(Instantiate(heart, livesUI.transform));
+        }
     }
 
     private void Update()
@@ -111,8 +113,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Hurt") && !isImmune)
         {
-            lives -= 1;
-            Debug.Log(lives);
+            DecrementLives();
             StartCoroutine(Immunity());
             // Copy de Fried Phoenix
 
@@ -122,10 +123,6 @@ public class PlayerController : MonoBehaviour
             //Destroy(_hearts.Pop());
 
             // Immunity
-            if (lives <= 0)
-            {
-                // DO photorealistic hand animation
-            }
             isImmune = true;
             //_animator.SetBool(IsHurt, false);
         }
@@ -139,18 +136,34 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator ResetPlayerPosition(Vector3 playerPos)
     {
-        fadeController.FadeToBlack();
+        if (!isReseting)
+        {
+            isReseting = true;
+            fadeController.FadeToBlack();
 
-        yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.5f);
 
 
-        roomManagerScript.NextRoom();
-        transform.position = playerPos;
+            roomManagerScript.NextRoom();
+            transform.position = playerPos;
 
-        fadeController.FadeToScene();
+            fadeController.FadeToScene();
 
-        yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.5f);
 
-        isMovable = true;
+            isMovable = true;
+            isReseting = false;
+        }
+    }
+    
+    private void DecrementLives()
+    {
+        lives--;
+        Debug.Log(lives);
+        if (lives <= 0)
+        {
+            SceneManager.LoadScene(gameLostScene, LoadSceneMode.Single);
+        }
+        Destroy(_hearts.Pop());
     }
 }
