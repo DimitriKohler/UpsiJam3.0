@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayOnClick : MonoBehaviour
+public class GoToScene : MonoBehaviour
 {
     [SerializeField] private string sceneName;
     private Button _yourButton;
