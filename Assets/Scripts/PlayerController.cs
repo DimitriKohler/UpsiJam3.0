@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 1f;
-
+    [SerializeField] private GameObject livesUI;
+    [SerializeField] private GameObject heart;
+    [SerializeField] private int lives;
+    [SerializeField] private string gameLostScene;
 
     public GameObject roomManager;
+    
     private RoomManagerScript roomManagerScript;
 
     // Movement components
@@ -15,9 +20,12 @@ public class PlayerController : MonoBehaviour
     private float verticalMovement;
 
     private bool isMovable = true;
+    private bool isReseting = false;
 
     private FadeController fadeController;
     private AudioSource _walkingAudioSource;
+
+    private readonly Stack<GameObject> _hearts = new Stack<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +33,12 @@ public class PlayerController : MonoBehaviour
         fadeController = FindObjectOfType<FadeController>();
         roomManagerScript = roomManager.GetComponent<RoomManagerScript>();
         _walkingAudioSource = GetComponent<AudioSource>();
+
+        // Display as many hearts as there are lives
+        for (int i = 0; i < lives; i++)
+        {
+            _hearts.Push(Instantiate(heart, livesUI.transform));
+        }
     }
 
     private void Update()
@@ -91,18 +105,34 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator ResetPlayerPosition(Vector3 playerPos)
     {
-        fadeController.FadeToBlack();
+        if (!isReseting)
+        {
+            isReseting = true;
+            DecrementLives();
+            fadeController.FadeToBlack();
 
-        yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.5f);
 
 
-        roomManagerScript.NextRoom();
-        transform.position = playerPos;
+            roomManagerScript.NextRoom();
+            transform.position = playerPos;
 
-        fadeController.FadeToScene();
+            fadeController.FadeToScene();
 
-        yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.5f);
 
-        isMovable = true;
+            isMovable = true;
+            isReseting = false;
+        }
+    }
+
+    private void DecrementLives()
+    {
+        lives--;
+        if (lives <= 0)
+        {
+            SceneManager.LoadScene(gameLostScene, LoadSceneMode.Single);
+        }
+        Destroy(_hearts.Pop());
     }
 }
