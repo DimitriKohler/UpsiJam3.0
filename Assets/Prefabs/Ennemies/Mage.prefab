@@ -587,6 +587,9 @@ MonoBehaviour:
   moveRange: 5
   moveTime: 1
   lives: 3
+  _shakeMagnitude: 0.1
+  _shakeDuration: 0.5
+  _resetCamera: 1
 --- !u!50 &5611773927954229754
 Rigidbody2D:
   serializedVersion: 4
@@ -717,7 +720,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 35067327c965da94e896bc20a51fcb27, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: -2.82
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0

@@ -73,9 +73,11 @@ public class KnightController : MonoBehaviour
             {
                 isDead = true;
 
+                _deathAudioSource.Play();
+
                 // Death cloud
                 Instantiate(cloudDeathPrefab, transform.position, Quaternion.identity);
-                _deathAudioSource.Play();
+  
 
                 this.gameObject.GetComponent<Collider2D>().enabled = false;
                 int childCount = this.gameObject.transform.childCount;
