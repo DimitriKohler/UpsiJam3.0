@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float movementSpeed = 1f;
+    [SerializeField] private float movementSpeed = 1f;
 
 
     public GameObject roomManager;
@@ -17,12 +17,14 @@ public class PlayerController : MonoBehaviour
     private bool isMovable = true;
 
     private FadeController fadeController;
+    private AudioSource _walkingAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         fadeController = FindObjectOfType<FadeController>();
         roomManagerScript = roomManager.GetComponent<RoomManagerScript>();
+        _walkingAudioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -39,7 +41,15 @@ public class PlayerController : MonoBehaviour
         {
             // https://answers.unity.com/questions/285476/maintain-direction-regardless-of-rotation.html
             transform.Translate(horizontalMovement * movementSpeed * Time.deltaTime, verticalMovement * movementSpeed * Time.deltaTime, 0, Space.World);
+        }
 
+        if (!isMovable || (horizontalMovement == 0 && verticalMovement == 0))
+        {
+            _walkingAudioSource.Stop();
+        }
+        else if (!_walkingAudioSource.isPlaying)
+        {
+            _walkingAudioSource.Play();
         }
     }
 
