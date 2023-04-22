@@ -20,8 +20,11 @@ public class KnightController : MonoBehaviour
 
     public float speed = 2f;
     public int lives = 3;
+    public float _shakeMagnitude = 0.1f;
+    public float _shakeDuration = 0.5f;
+    public bool _resetCamera = true;
 
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -79,8 +82,9 @@ public class KnightController : MonoBehaviour
                 }
 
                 Destroy(this.gameObject, 1f);
-                //cameraShake.shakeDuration = 2;
-                //cameraShake.shakeMagnitude = 4;
+                cameraShake.shakeDuration = _shakeDuration;
+                cameraShake.shakeMagnitude = _shakeMagnitude;
+                cameraShake.resetCamera = _resetCamera;
                 cameraShake.Shake();
             }
             else

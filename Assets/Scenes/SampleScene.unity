@@ -305,9 +305,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.00004536286
+    x: 0
     y: 0
-    width: 1.0000907
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -358,6 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakeDuration: 0.5
   shakeMagnitude: 0.1
+  resetCamera: 1
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,6 +927,10 @@ PrefabInstance:
       propertyPath: heart
       value: 
       objectReference: {fileID: 642337020733680136, guid: b8509b2a3aa1b3f4c919652a05d05758, type: 3}
+    - target: {fileID: 4109762404125182556, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 519420028}
     - target: {fileID: 4109762404125182556, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
       propertyPath: livesUI
       value: 
