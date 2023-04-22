@@ -91,6 +91,7 @@ public class MageController : MonoBehaviour
                 _deathAudioSource.Play();
 
                 this.gameObject.GetComponent<Collider2D>().enabled = false;
+                int childCount = this.gameObject.transform.childCount;
                 this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
 

@@ -72,8 +72,12 @@ public class KnightController : MonoBehaviour
                 _deathAudioSource.Play();
 
                 this.gameObject.GetComponent<Collider2D>().enabled = false;
-                this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+                int childCount = this.gameObject.transform.childCount;
+                for (int i = 0; i < childCount; i++)
+                {
+                    this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                }
+
                 Destroy(this.gameObject, 1f);
                 //cameraShake.shakeDuration = 2;
                 //cameraShake.shakeMagnitude = 4;
