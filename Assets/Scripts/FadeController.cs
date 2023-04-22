@@ -11,7 +11,6 @@ public class FadeController : MonoBehaviour
     void Start()
     {
         fadeImage = GetComponent<Image>();
-        Debug.Log(fadeImage);
     }
 
     public void FadeToBlack()

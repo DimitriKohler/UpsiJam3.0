@@ -467,7 +467,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &897447551
 PrefabInstance:
@@ -526,7 +526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
---- !u!1001 &1396070868
+--- !u!1001 &1947416128
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -547,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109762404125182555, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.2441
       objectReference: {fileID: 0}
     - target: {fileID: 4109762404125182555, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
       propertyPath: m_LocalPosition.z

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1941242789237593194}
   - component: {fileID: 5022556065415337000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: knight_legR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 764222778144517087}
   - component: {fileID: 7362685767640650714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: knight_Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1645899101059007525}
   - component: {fileID: 6007680095923640207}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: knight_sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 274541740362306782}
   - component: {fileID: 5515339257308405641}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: knight_armL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1413176582344261908}
   - component: {fileID: 8142726327780888620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9152072337259682664}
   - component: {fileID: 7708315614292223806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: knight_legL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3872954326374804240}
   - component: {fileID: 8262121576329428993}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: knight_armR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,9 +571,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3851274654730432290}
-  m_Layer: 0
+  - component: {fileID: -8105902646930223656}
+  - component: {fileID: -6754868420011456708}
+  m_Layer: 6
   m_Name: Knight
-  m_TagString: Untagged
+  m_TagString: Hurt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -594,3 +596,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &-8105902646930223656
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6988127560168908749}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.42089868, y: 0.357288}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.3796344, y: 2.658203}
+  m_EdgeRadius: 0
+--- !u!114 &-6754868420011456708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6988127560168908749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f68070d8292004d9a93d25bcde3cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  lives: 3

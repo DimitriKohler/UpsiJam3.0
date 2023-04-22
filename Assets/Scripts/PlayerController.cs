@@ -6,8 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 1f;
     public int lives = 3;
-    public GameObject livesUI;
+    //public GameObject livesUI;
     public float immunityInSeconds;
+    private bool isImmune = false;
 
 
     public GameObject roomManager;
@@ -34,14 +35,14 @@ public class PlayerController : MonoBehaviour
         roomManagerScript = roomManager.GetComponent<RoomManagerScript>();
         _walkingAudioSource = GetComponent<AudioSource>();
         _hurtAudioSource = GetComponent<AudioSource>();
-        _collider = GetComponent<Collider2D>();
+        _collider = GetComponents<Collider2D>()[0];
         _animator = GetComponentInChildren<Animator>();
 
 
-        foreach (Transform heartTransform in livesUI.transform)
+        /*foreach (Transform heartTransform in livesUI.transform)
         {
             _hearts.Push(heartTransform.gameObject);
-        }
+        }*/
     }
 
     private void Update()
@@ -106,12 +107,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private IEnumerator OnTriggerStay2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Hurt"))
+        if (other.CompareTag("Hurt") && !isImmune)
         {
             lives -= 1;
             Debug.Log(lives);
+            StartCoroutine(Immunity());
             // Copy de Fried Phoenix
 
             //_animator.SetBool(IsHurt, true);
@@ -120,15 +122,19 @@ public class PlayerController : MonoBehaviour
             //Destroy(_hearts.Pop());
 
             // Immunity
-            _collider.enabled = false;
-            yield return new WaitForSeconds(immunityInSeconds);
             if (lives <= 0)
             {
                 // DO photorealistic hand animation
             }
-            _collider.enabled = true;
+            isImmune = true;
             //_animator.SetBool(IsHurt, false);
         }
+    }
+
+    IEnumerator Immunity()
+    {
+        yield return new WaitForSeconds(immunityInSeconds);
+        isImmune = false;
     }
 
     IEnumerator ResetPlayerPosition(Vector3 playerPos)
