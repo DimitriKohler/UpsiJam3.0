@@ -13,6 +13,10 @@ public class MageController : MonoBehaviour
     private bool cdHurt = false;
     [SerializeField] private GameObject cloudDeathPrefab;
 
+
+    private AudioSource _hitAudioSource;
+    private AudioSource _deathAudioSource;
+
     public float moveSpeed = 3f; // the speed at which the enemy moves
     public float moveRange = 5f; // the maximum distance the enemy can move from its starting position
     public float moveTime = 2f; // the amount of time the enemy spends moving in one direction before changing direction
@@ -33,6 +37,8 @@ public class MageController : MonoBehaviour
         targetPosition = GetRandomTargetPosition();
         StartCoroutine(WaitAndStartMoving());
         mageAnimator = gameObject.GetComponentInChildren<Animator>();
+        _hitAudioSource = GetComponents<AudioSource>()[0];
+        _deathAudioSource = GetComponents<AudioSource>()[1];
     }
 
     IEnumerator WaitAndStartMoving()
@@ -82,11 +88,20 @@ public class MageController : MonoBehaviour
             {
                 // Death cloud
                 Instantiate(cloudDeathPrefab, transform.position, Quaternion.identity);
+                _deathAudioSource.Play();
 
-                Destroy(this.gameObject);
+                this.gameObject.GetComponent<Collider2D>().enabled = false;
+                this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+
+                Destroy(this.gameObject, 1f);
                 //cameraShake.shakeDuration = 2;
                 //cameraShake.shakeMagnitude = 4;
                 cameraShake.Shake();
+            }
+            else
+            {
+                _hitAudioSource.Play();
             }
         }
     }

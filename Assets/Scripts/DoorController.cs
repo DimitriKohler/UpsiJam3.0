@@ -5,12 +5,15 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     private bool hasEnnemies;
-    private bool openDoors = false;
+    private bool isOpen = false;
+    // private bool openDoors = false;
+    private AudioSource _openAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-      
+        _openAudioSource = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -49,6 +52,11 @@ public class DoorController : MonoBehaviour
         // Get the transform of the parent object
         Transform parentTransform = gameObject.transform;
 
+        if (!_openAudioSource.isPlaying && !isOpen)
+        {
+            _openAudioSource.Play();
+        }
+
         // Find all children with the name "ChildName"
         foreach (Transform child in parentTransform)
         {
@@ -62,6 +70,8 @@ public class DoorController : MonoBehaviour
                 child.gameObject.SetActive(false);
             }
         }
+
+        isOpen = true;
     }
 
     void CloseDoors()
@@ -82,5 +92,7 @@ public class DoorController : MonoBehaviour
                 child.gameObject.SetActive(true);
             }
         }
+
+        isOpen = false;
     }
 }

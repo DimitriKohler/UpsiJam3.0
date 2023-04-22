@@ -698,7 +698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cloudDeathPrefab: {fileID: 7489488551096258145, guid: ceae90291d1d9a44fae2daf70b978094, type: 3}
   speed: 1.5
-  lives: 3
+  lives: 5
 --- !u!50 &5766602740721793735
 Rigidbody2D:
   serializedVersion: 4
