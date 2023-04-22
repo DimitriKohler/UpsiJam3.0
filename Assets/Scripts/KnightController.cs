@@ -8,8 +8,8 @@ public class KnightController : MonoBehaviour
     private GameObject player;
     private GameObject camera;
     private CameraShake cameraShake;
+    private Vector3 startingPosition; // the starting position of the enemy
 
-    public Vector3 startingPosition; // the starting position of the enemy
     public float speed = 2f;
     public int lives = 3;
 
@@ -19,7 +19,7 @@ public class KnightController : MonoBehaviour
         player = GameObject.Find("Player");
         camera = GameObject.Find("Main Camera");
         cameraShake = camera.GetComponent<CameraShake>();
-        transform.position = startingPosition;
+        startingPosition = transform.position;
     }
 
     // Update is called once per frame

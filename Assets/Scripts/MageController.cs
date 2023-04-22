@@ -14,7 +14,7 @@ public class MageController : MonoBehaviour
     public float moveTime = 2f; // the amount of time the enemy spends moving in one direction before changing direction
     public int lives = 3;
 
-    public Vector3 startingPosition; // the starting position of the enemy
+    private Vector3 startingPosition; // the starting position of the enemy
     private Vector3 targetPosition; // the target position the enemy is moving towards
     private float moveTimer; // the timer for how long the enemy has been moving in one direction
 
@@ -25,7 +25,7 @@ public class MageController : MonoBehaviour
         player = GameObject.Find("Player");
         camera = GameObject.Find("Main Camera");
         cameraShake = camera.GetComponent<CameraShake>();
-        transform.position = startingPosition;
+        startingPosition = transform.position;
         targetPosition = GetRandomTargetPosition();
     }
 

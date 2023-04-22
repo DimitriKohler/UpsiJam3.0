@@ -4,22 +4,44 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    private GameObject ennemies;
+    private bool hasEnnemies;
     private bool openDoors = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        ennemies = GameObject.Find("Ennemies");
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (openDoors || ennemies.transform.childCount == 0)
+        Transform parentTransform = gameObject.transform;
+
+        // Find all children with the name "ChildName"
+        foreach (Transform child in parentTransform)
+        {
+            if (child.name == "Ennemies")
+            {
+                if(child.transform.childCount == 0)
+                {
+                    hasEnnemies = false;
+                }
+                else
+                {
+                    hasEnnemies = true;
+                }
+            }
+        }
+
+        if (!hasEnnemies)
         {
             OpenDoors();
-        }       
+        } 
+        else
+        {
+            CloseDoors();
+        }
     }
 
     void OpenDoors()
