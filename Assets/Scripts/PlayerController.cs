@@ -115,12 +115,6 @@ public class PlayerController : MonoBehaviour
         {
             DecrementLives();
             StartCoroutine(Immunity());
-            // Copy de Fried Phoenix
-
-            //_animator.SetBool(IsHurt, true);
-            //_hurtAudioSource.Play();
-
-            //Destroy(_hearts.Pop());
 
             // Immunity
             isImmune = true;
@@ -145,6 +139,15 @@ public class PlayerController : MonoBehaviour
 
 
             roomManagerScript.NextRoom();
+            // Find all game objects with the "Bullet" tag
+            GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+
+            // Loop through the bullets array and destroy each bullet
+            foreach (GameObject bullet in bullets)
+            {
+                Destroy(bullet);
+            }
+
             transform.position = playerPos;
 
             fadeController.FadeToScene();
