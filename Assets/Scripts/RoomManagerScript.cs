@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class RoomManagerScript : MonoBehaviour
 {
-    public GameObject[] roomList;
+    private System.Random rnd = new System.Random(); // Create a Random instance
 
-    private int currentRoomIndex;
+    public List<GameObject> tutoRoomList;
+    public List<GameObject> lowGlitchRoomList;
+    public GameObject middleGlitchRoom;
+    public List<GameObject> highGlitchRoomList;
+    public List<GameObject> endgameRoomList;
+
+    public int lowGlitchRoomCount = 3;
+    public int highGlitchRoomCount = 3;
+
+    private List<GameObject> roomList = new List<GameObject>();
+
+    private int currentRoomIndex = 0;
 
     private GameObject currentRoomObj;
 
@@ -15,10 +26,10 @@ public class RoomManagerScript : MonoBehaviour
         get { return currentRoomObj; }
     }
 
-
     // Start is called before the first frame update
     void Start()
     {
+        GenerateRoomList();
         SpawnRoom(0);
     }
 
@@ -28,18 +39,50 @@ public class RoomManagerScript : MonoBehaviour
        
     }
 
+    private void GenerateRoomList()
+    {
+        foreach (GameObject room in tutoRoomList)
+        {
+            roomList.Add(room);
+        }
+
+        for (int i = 0; i < lowGlitchRoomCount; i++)
+        {
+            int randomIndex = rnd.Next(lowGlitchRoomList.Count); // Generate a random index
+            GameObject selectedRoom = lowGlitchRoomList[randomIndex]; // Get the random GameObject
+            lowGlitchRoomList.RemoveAt(randomIndex); // Remove the GameObject from the list
+            roomList.Add(selectedRoom);
+        }
+
+        roomList.Add(middleGlitchRoom);
+
+        for (int i = 0; i < highGlitchRoomCount; i++)
+        {
+            int randomIndex = rnd.Next(highGlitchRoomList.Count); // Generate a random index
+            GameObject selectedRoom = highGlitchRoomList[randomIndex]; // Get the random GameObject
+            highGlitchRoomList.RemoveAt(randomIndex); // Remove the GameObject from the list
+            roomList.Add(selectedRoom);
+        }
+
+        foreach (GameObject room in endgameRoomList)
+        {
+            roomList.Add(room);
+        }
+    }
+
     private void SpawnRoom(int roomIndex)
     {
+        Debug.Log(roomList);
+        Debug.Log(currentRoomIndex);
         currentRoomObj = Instantiate(roomList[roomIndex], Vector3.zero, Quaternion.identity);
     }
 
     public void NextRoom()
     {
-        Debug.Log("NEXT");
-
         currentRoomIndex += 1;
 
-        if (currentRoomIndex >= roomList.Length)
+
+        if (currentRoomIndex >= roomList.Count)
         {
             currentRoomIndex = 0;
             //Debug.LogError("Room index out of bounds, return to 0");
