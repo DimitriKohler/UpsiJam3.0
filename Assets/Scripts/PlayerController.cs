@@ -124,7 +124,9 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Immunity()
     {
+        _animator.SetBool("isHurt", true);
         yield return new WaitForSeconds(immunityInSeconds);
+        _animator.SetBool("isHurt", false);
         isImmune = false;
     }
 
