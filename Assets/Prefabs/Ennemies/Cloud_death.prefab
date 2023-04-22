@@ -345,8 +345,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3691749115509644559}
-  - component: {fileID: 272512988633195148}
   - component: {fileID: 4769633429752695761}
+  - component: {fileID: 4551053466937076299}
   m_Layer: 0
   m_Name: Cloud_death
   m_TagString: Untagged
@@ -375,26 +375,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &272512988633195148
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7489488551096258145}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6c8a348273c6d67479c7aa777a874ae5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4769633429752695761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +387,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba646432abe674545ade3549955edb44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &4551053466937076299
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7489488551096258145}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e65ae93fd427e941b58a0d822c18592, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7684137217631424035
 GameObject:
   m_ObjectHideFlags: 0
