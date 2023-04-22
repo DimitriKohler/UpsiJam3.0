@@ -305,9 +305,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: -0.00004536286
     y: 0
-    width: 1
+    width: 1.0000907
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -862,6 +862,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4027585008504496971, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
+      propertyPath: bulletSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4109762404125182553, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
       propertyPath: m_Name
       value: Player

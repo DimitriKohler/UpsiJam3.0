@@ -8,12 +8,9 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] GameObject projectile;
     [SerializeField] float timeoutBetweenBullets = 1f;
     [SerializeField] AudioClip shootingSound;
+    [SerializeField] private float bulletSpeed = 1f;
 
     Camera _camera;
-
-    private Vector2 positionOnScreen;
-    private Vector2 mouseOnScreen;
-    private float angle;
 
     bool _alreadyShot = false;
     AudioSource _audioSource;
@@ -28,21 +25,21 @@ public class PlayerShoot : MonoBehaviour
     {
         if (!_alreadyShot && (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)))
         {
-            Instantiate(projectile, transform.position, transform.rotation);
+            ShootBullet();
             StartCoroutine(Timeout(timeoutBetweenBullets));
             _audioSource.PlayOneShot(shootingSound);
         }
-
-        // ROTATE ACCORDING TO MOUSE
-        // thanks: https://answers.unity.com/questions/855976/make-a-player-model-rotate-towards-mouse-location.html
-        positionOnScreen = _camera.WorldToViewportPoint(transform.position);
-        mouseOnScreen = _camera.ScreenToViewportPoint(Input.mousePosition);
-        angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
     }
 
-    void FixedUpdate()
+    void ShootBullet()
     {
-        transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+        Vector2 target = _camera.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 position = transform.position;
+        
+        Vector2 direction = target - (Vector2)position;
+        direction.Normalize();
+        GameObject currentProjectile = Instantiate(this.projectile, position, Quaternion.identity);
+        currentProjectile.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
     }
 
     IEnumerator Timeout(float seconds)
@@ -50,10 +47,5 @@ public class PlayerShoot : MonoBehaviour
         _alreadyShot = true;
         yield return new WaitForSeconds(seconds);
         _alreadyShot = false;
-    }
-
-    float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
-    {
-        return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
     }
 }
