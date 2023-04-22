@@ -14,6 +14,10 @@ public class KnightController : MonoBehaviour
     private bool cdHurt = false;
     [SerializeField] private GameObject cloudDeathPrefab;
 
+
+    private AudioSource _hitAudioSource;
+    private AudioSource _deathAudioSource;
+
     public float speed = 2f;
     public int lives = 3;
 
@@ -28,6 +32,8 @@ public class KnightController : MonoBehaviour
         startingPosition = transform.position;
         StartCoroutine(WaitAndStartMoving());
         knightAnimator = gameObject.GetComponentInChildren<Animator>();
+        _hitAudioSource = GetComponents<AudioSource>()[0];
+        _deathAudioSource = GetComponents<AudioSource>()[1];
     }
 
     IEnumerator WaitAndStartMoving()
@@ -63,11 +69,19 @@ public class KnightController : MonoBehaviour
             {
                 // Death cloud
                 Instantiate(cloudDeathPrefab, transform.position, Quaternion.identity);
+                _deathAudioSource.Play();
 
-                Destroy(this.gameObject);
+                this.gameObject.GetComponent<Collider2D>().enabled = false;
+                this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+                Destroy(this.gameObject, 1f);
                 //cameraShake.shakeDuration = 2;
                 //cameraShake.shakeMagnitude = 4;
                 cameraShake.Shake();
+            }
+            else
+            {
+                _hitAudioSource.Play();
             }
         }
     }
