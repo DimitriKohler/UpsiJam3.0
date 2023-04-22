@@ -694,10 +694,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuButton
       objectReference: {fileID: 0}
-    - target: {fileID: 5351049828855751199, guid: e5926818e7305404aafc3bd1ea599fce, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6294040046398906496, guid: e5926818e7305404aafc3bd1ea599fce, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
