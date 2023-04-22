@@ -579,11 +579,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1530484d460da74e891540a52d43913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cloudDeathPrefab: {fileID: 7489488551096258145, guid: ceae90291d1d9a44fae2daf70b978094, type: 3}
   moveSpeed: 1
   moveRange: 5
   moveTime: 1
   lives: 3
-  startingPosition: {x: 0, y: 0, z: 0}
 --- !u!50 &5611773927954229754
 Rigidbody2D:
   serializedVersion: 4
