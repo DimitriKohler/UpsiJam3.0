@@ -12,6 +12,7 @@ public class KnightController : MonoBehaviour
     private bool canMove = false;
     private Animator knightAnimator;
     private bool cdHurt = false;
+    private bool isDead = false;
     [SerializeField] private GameObject cloudDeathPrefab;
 
 
@@ -65,8 +66,10 @@ public class KnightController : MonoBehaviour
             lives -= 1;
             StartCoroutine(HurtAnimation());
 
-            if (lives <= 0)
+            if (lives <= 0 && !isDead)
             {
+                isDead = true;
+
                 // Death cloud
                 Instantiate(cloudDeathPrefab, transform.position, Quaternion.identity);
                 _deathAudioSource.Play();
@@ -75,7 +78,7 @@ public class KnightController : MonoBehaviour
                 int childCount = this.gameObject.transform.childCount;
                 for (int i = 0; i < childCount; i++)
                 {
-                    this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                    this.gameObject.transform.GetChild(i).gameObject.SetActive(false);
                 }
 
                 Destroy(this.gameObject, 1f);

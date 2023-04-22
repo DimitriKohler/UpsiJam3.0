@@ -11,6 +11,7 @@ public class MageController : MonoBehaviour
     private bool canMove = false;
     private Animator mageAnimator;
     private bool cdHurt = false;
+    private bool isDead = false;
     [SerializeField] private GameObject cloudDeathPrefab;
 
 
@@ -84,16 +85,20 @@ public class MageController : MonoBehaviour
         {
             lives -= 1;
             StartCoroutine(HurtAnimation());
-            if (lives <= 0)
+            if (lives <= 0 && !isDead)
             {
+                isDead = true;
+
                 // Death cloud
                 Instantiate(cloudDeathPrefab, transform.position, Quaternion.identity);
                 _deathAudioSource.Play();
 
                 this.gameObject.GetComponent<Collider2D>().enabled = false;
                 int childCount = this.gameObject.transform.childCount;
-                this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+                for (int i = 0; i < childCount; i++)
+                {
+                    this.gameObject.transform.GetChild(i).gameObject.SetActive(false);
+                }
 
                 Destroy(this.gameObject, 1f);
                 //cameraShake.shakeDuration = 2;
