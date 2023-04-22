@@ -863,11 +863,19 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4027585008504496971, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 6669051060729727770, guid: 82804f77708f6e24bb19cbd6f5748b45, type: 3}
+    - target: {fileID: 4027585008504496971, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
       propertyPath: bulletSpeed
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4109762404125182553, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109762404125182553, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4109762404125182555, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}

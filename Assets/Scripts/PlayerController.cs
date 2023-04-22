@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -111,15 +112,30 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Hurt") && !isImmune)
+        if (isImmune)
         {
-            DecrementLives();
-            StartCoroutine(Immunity());
-
-            // Immunity
-            isImmune = true;
-            //_animator.SetBool(IsHurt, false);
+            return;
         }
+        
+        if (other.CompareTag("Hurt"))
+        {
+            TakeHit();
+        }
+        else if (other.CompareTag("HurtBullet"))
+        {
+            TakeHit();
+            Destroy(other.gameObject);
+        }
+    }
+
+    private void TakeHit()
+    {
+        DecrementLives();
+        StartCoroutine(Immunity());
+
+        // Immunity
+        isImmune = true;
+        //_animator.SetBool(IsHurt, false);
     }
 
     IEnumerator Immunity()
