@@ -338,6 +338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25ef944c41f51ba41b28f7a8d7b6e393, type: 3}
+--- !u!1 &615708322 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 549430436790812082, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+  m_PrefabInstance: {fileID: 897447551}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,22 +509,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
-      propertyPath: roomList.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
-      propertyPath: roomList.Array.data[0]
-      value: 
-      objectReference: {fileID: 9221800058787518647, guid: e9c5a6ccc8c83674f8958b61f6b8a0fc, type: 3}
-    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
-      propertyPath: roomList.Array.data[1]
-      value: 
-      objectReference: {fileID: 9221800058787518647, guid: f4ac0449e9689b14c986a2818bc382a0, type: 3}
-    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
-      propertyPath: roomList.Array.data[2]
-      value: 
-      objectReference: {fileID: 9221800058787518647, guid: 774d4de18f74abe4f83b95ef24355ab5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
 --- !u!1001 &1396070868
@@ -577,5 +566,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4109762404125182556, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 615708322}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
