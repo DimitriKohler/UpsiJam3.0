@@ -9,6 +9,7 @@ public class KnightController : MonoBehaviour
     private GameObject camera;
     private CameraShake cameraShake;
     private Vector3 startingPosition; // the starting position of the enemy
+    private bool canMove = false;
 
     public float speed = 2f;
     public int lives = 3;
@@ -20,6 +21,13 @@ public class KnightController : MonoBehaviour
         camera = GameObject.Find("Main Camera");
         cameraShake = camera.GetComponent<CameraShake>();
         startingPosition = transform.position;
+        StartCoroutine(WaitAndStartMoving());
+    }
+
+    IEnumerator WaitAndStartMoving()
+    {
+        yield return new WaitForSeconds(0.5f);
+        canMove = true;
     }
 
     // Update is called once per frame
@@ -30,9 +38,12 @@ public class KnightController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 direction = player.transform.position - transform.position;
-        direction.Normalize();
-        transform.Translate(direction * speed * Time.deltaTime);
+        if (canMove)
+        {
+            Vector2 direction = player.transform.position - transform.position;
+            direction.Normalize();
+            transform.Translate(direction * speed * Time.deltaTime);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)

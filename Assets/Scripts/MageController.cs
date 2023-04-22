@@ -8,6 +8,7 @@ public class MageController : MonoBehaviour
     private GameObject player;
     private GameObject camera;
     private CameraShake cameraShake;
+    private bool canMove = false;
 
     public float moveSpeed = 3f; // the speed at which the enemy moves
     public float moveRange = 5f; // the maximum distance the enemy can move from its starting position
@@ -27,6 +28,13 @@ public class MageController : MonoBehaviour
         cameraShake = camera.GetComponent<CameraShake>();
         startingPosition = transform.position;
         targetPosition = GetRandomTargetPosition();
+        StartCoroutine(WaitAndStartMoving());
+    }
+
+    IEnumerator WaitAndStartMoving()
+    {
+        yield return new WaitForSeconds(0.5f);
+        canMove = true;
     }
 
     // Update is called once per frame
@@ -37,23 +45,26 @@ public class MageController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Move towards the target position
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-
-        // If the enemy has reached the target position, get a new target position
-        if (transform.position == targetPosition)
+        if (canMove)
         {
-            targetPosition = GetRandomTargetPosition();
-        }
+            // Move towards the target position
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
-        // Increment the move timer
-        moveTimer += Time.deltaTime;
+            // If the enemy has reached the target position, get a new target position
+            if (transform.position == targetPosition)
+            {
+                targetPosition = GetRandomTargetPosition();
+            }
 
-        // If the move timer has reached the move time, get a new target position
-        if (moveTimer >= moveTime)
-        {
-            targetPosition = GetRandomTargetPosition();
-            moveTimer = 0f;
+            // Increment the move timer
+            moveTimer += Time.deltaTime;
+
+            // If the move timer has reached the move time, get a new target position
+            if (moveTimer >= moveTime)
+            {
+                targetPosition = GetRandomTargetPosition();
+                moveTimer = 0f;
+            }
         }
     }
 

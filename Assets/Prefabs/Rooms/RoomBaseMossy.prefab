@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 298929597344688540}
   - component: {fileID: 3695101874258678138}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightDoor
   m_TagString: Right
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3260915894530893502}
   - component: {fileID: 2281427039573928382}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TopDoor
   m_TagString: Top
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1550294923573318319}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6422979567434977749}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9098653167510287670}
   - component: {fileID: 1277724700957472324}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BottomDoor
   m_TagString: Bottom
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 7045417633440126015}
   - component: {fileID: 5413657011744234432}
   - component: {fileID: 4833512020683581667}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DefaultWall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3608725331770337601}
   - component: {fileID: 3625868512551230313}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftDoor
   m_TagString: Left
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3994691321309926647}
   - component: {fileID: 2740193871484226265}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RoomBaseMossy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
