@@ -305,9 +305,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.0683688
+    x: 0
     y: 0
-    width: 1.1367376
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -677,24 +677,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc,
-        type: 3}
-      propertyPath: roomList.Array.data[2]
-      value: 
-      objectReference: {fileID: 9221800058787518647, guid: 33c8a03fe1a1b7142a215b2b6954f044,
-        type: 3}
-    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc,
-        type: 3}
-      propertyPath: roomList.Array.data[1]
-      value: 
-      objectReference: {fileID: 9221800058787518647, guid: 4ce9f82ec2b2f1c41a75ea0fdc8e8877,
-        type: 3}
-    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc,
-        type: 3}
-      propertyPath: roomList.Array.data[2]
-      value: 
-      objectReference: {fileID: 9221800058787518647, guid: 4ce9f82ec2b2f1c41a75ea0fdc8e8877,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
 --- !u!1001 &995546310

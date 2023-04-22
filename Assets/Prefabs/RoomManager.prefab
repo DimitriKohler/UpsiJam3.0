@@ -44,7 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d821bd5eef41214bad6e69f8576958d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomList:
-  - {fileID: 9221800058787518647, guid: e9c5a6ccc8c83674f8958b61f6b8a0fc, type: 3}
-  - {fileID: 9221800058787518647, guid: e24a7273cd3347f43a77827d52a86179, type: 3}
-  - {fileID: 9221800058787518647, guid: 3e3b4918ffdd55946920211559dc0b0e, type: 3}
+  tutoRoomList:
+  - {fileID: 9221800058787518647, guid: 68b8f4284fadcd64abe1c4a92e1846c6, type: 3}
+  - {fileID: 9221800058787518647, guid: 9ec5b75edd390ef4c983e708e16bf002, type: 3}
+  - {fileID: 9221800058787518647, guid: 19f838a36d8acc24f87dcb69e9322501, type: 3}
+  - {fileID: 9221800058787518647, guid: 09021bcc32489b044a75da704d35031c, type: 3}
+  - {fileID: 9221800058787518647, guid: 8e576e50b8d587f4295420f6f136148c, type: 3}
+  - {fileID: 9221800058787518647, guid: 7396d53ede23ef84dbfa2133b92b7c44, type: 3}
+  lowGlitchRoomList: []
+  middleGlitchRoom: {fileID: 9221800058787518647, guid: 81c5741be2911f34abc1001272da1a6b, type: 3}
+  highGlitchRoomList: []
+  endgameRoomList: []
+  lowGlitchRoomCount: 0
+  highGlitchRoomCount: 0
