@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 6461931121121525969}
   - component: {fileID: 7430309771935126302}
   m_Layer: 7
-  m_Name: RoomLava1
+  m_Name: RoomFiredMages
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

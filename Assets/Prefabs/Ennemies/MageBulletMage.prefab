@@ -520,8 +520,9 @@ GameObject:
   - component: {fileID: 7532362202040753590}
   - component: {fileID: 1723931632122378933}
   - component: {fileID: -2568734105455881702}
+  - component: {fileID: -7758560335398054362}
   m_Layer: 6
-  m_Name: Mage
+  m_Name: MageBulletMage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cloudDeathPrefab: {fileID: 7489488551096258145, guid: ceae90291d1d9a44fae2daf70b978094, type: 3}
-  moveSpeed: 1
+  moveSpeed: 0
   moveRange: 5
   moveTime: 1
   lives: 3
@@ -817,6 +818,20 @@ MonoBehaviour:
   delayFirstShoot: 2
   shootingSound: {fileID: 8300000, guid: e75b62a2e03c81b4eb5726d04b493f3b, type: 3}
   sideBulletAngle: 30
+--- !u!114 &-7758560335398054362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6793648967875305894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 931b716da58043ed8a2763ccce91d9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  directionScale: 1.5
 --- !u!1 &7344523089231090369
 GameObject:
   m_ObjectHideFlags: 0
