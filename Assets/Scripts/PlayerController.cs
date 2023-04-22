@@ -164,13 +164,17 @@ public class PlayerController : MonoBehaviour
 
             yield return new WaitForSeconds(0.5f);
 
-
             roomManagerScript.NextRoom();
             // Find all game objects with the "Bullet" tag
             GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+            GameObject[] hurtBullets = GameObject.FindGameObjectsWithTag("HurtBullet");
 
             // Loop through the bullets array and destroy each bullet
             foreach (GameObject bullet in bullets)
+            {
+                Destroy(bullet);
+            }
+            foreach (GameObject bullet in hurtBullets)
             {
                 Destroy(bullet);
             }

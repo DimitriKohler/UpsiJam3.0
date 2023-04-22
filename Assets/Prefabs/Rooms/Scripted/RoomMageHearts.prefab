@@ -1118,6 +1118,14 @@ PrefabInstance:
       propertyPath: timeoutBetweenBullets
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5775902609717405518, guid: 51157028e54f8f7458612dd4c4f3d2a2, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 6669051060729727770, guid: 53e03c5ea7e7b014199b9cbb3cbd5281, type: 3}
+    - target: {fileID: 5775902609717405518, guid: 51157028e54f8f7458612dd4c4f3d2a2, type: 3}
+      propertyPath: timeoutBetweenBullets
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6793648967875305894, guid: 51157028e54f8f7458612dd4c4f3d2a2, type: 3}
       propertyPath: m_Name
       value: Mage

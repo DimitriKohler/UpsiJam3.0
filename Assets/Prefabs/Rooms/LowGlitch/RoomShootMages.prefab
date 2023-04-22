@@ -1230,6 +1230,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4699540005013311953, guid: 51157028e54f8f7458612dd4c4f3d2a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699540005013311953, guid: 51157028e54f8f7458612dd4c4f3d2a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4722695011461229395, guid: 51157028e54f8f7458612dd4c4f3d2a2, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1237,6 +1245,14 @@ PrefabInstance:
     - target: {fileID: 4793381448758052227, guid: 51157028e54f8f7458612dd4c4f3d2a2, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775902609717405518, guid: 51157028e54f8f7458612dd4c4f3d2a2, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 6793648967875305894, guid: 23ff99ed8b669c14cb9f9f602a61da18, type: 3}
+    - target: {fileID: 5775902609717405518, guid: 51157028e54f8f7458612dd4c4f3d2a2, type: 3}
+      propertyPath: timeoutBetweenBullets
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6163014012348899274, guid: 51157028e54f8f7458612dd4c4f3d2a2, type: 3}
       propertyPath: m_Sprite

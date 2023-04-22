@@ -11,7 +11,9 @@ public class MageController : MonoBehaviour
     private bool canMove = false;
     private Animator mageAnimator;
     private bool cdHurt = false;
+    private bool isDead = false;
     [SerializeField] private GameObject cloudDeathPrefab;
+    
 
 
     private AudioSource _hitAudioSource;
@@ -21,6 +23,9 @@ public class MageController : MonoBehaviour
     public float moveRange = 5f; // the maximum distance the enemy can move from its starting position
     public float moveTime = 2f; // the amount of time the enemy spends moving in one direction before changing direction
     public int lives = 3;
+    public float _shakeMagnitude = 0.1f;
+    public float _shakeDuration = 0.5f;
+    public bool _resetCamera = true;
 
     private Vector3 startingPosition; // the starting position of the enemy
     private Vector3 targetPosition; // the target position the enemy is moving towards
@@ -84,20 +89,27 @@ public class MageController : MonoBehaviour
         {
             lives -= 1;
             StartCoroutine(HurtAnimation());
-            if (lives <= 0)
+            if (lives <= 0 && !isDead)
             {
+                isDead = true;
+
+                _deathAudioSource.Play();
+
                 // Death cloud
                 Instantiate(cloudDeathPrefab, transform.position, Quaternion.identity);
-                _deathAudioSource.Play();
+  
 
                 this.gameObject.GetComponent<Collider2D>().enabled = false;
                 int childCount = this.gameObject.transform.childCount;
-                this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+                for (int i = 0; i < childCount; i++)
+                {
+                    this.gameObject.transform.GetChild(i).gameObject.SetActive(false);
+                }
 
                 Destroy(this.gameObject, 1f);
-                //cameraShake.shakeDuration = 2;
-                //cameraShake.shakeMagnitude = 4;
+                cameraShake.shakeDuration = _shakeDuration;
+                cameraShake.shakeMagnitude = _shakeMagnitude;
+                cameraShake.resetCamera = _resetCamera;
                 cameraShake.Shake();
             }
             else

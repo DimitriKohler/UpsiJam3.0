@@ -18,7 +18,7 @@ public class MageShoot : MonoBehaviour
     private void Awake()
     {
         _camera = Camera.main;
-        _audioSource = GetComponent<AudioSource>();
+        _audioSource = transform.parent.gameObject.GetComponent<AudioSource>();
         _player = GameObject.FindGameObjectWithTag("Player");
     }
 

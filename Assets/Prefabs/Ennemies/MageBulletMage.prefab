@@ -168,6 +168,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4420003975079721257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2192686817332436947}
+  - component: {fileID: 543751565451576131}
+  m_Layer: 6
+  m_Name: MageShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2192686817332436947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4420003975079721257}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.49, y: 2.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6793648967875305895}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &543751565451576131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4420003975079721257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319c158ccf624de2bdb9f965245401a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 6669051060729727770, guid: 2f56b1f37fe567b48afe60094b71c8a8, type: 3}
+  timeoutBetweenBullets: 3
+  delayFirstShoot: 2
+  shootingSound: {fileID: 8300000, guid: e75b62a2e03c81b4eb5726d04b493f3b, type: 3}
+  sideBulletAngle: 30
 --- !u!1 &4722695011461229395
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,8 +568,8 @@ GameObject:
   - component: {fileID: 5611773927954229754}
   - component: {fileID: 7532362202040753590}
   - component: {fileID: 1723931632122378933}
-  - component: {fileID: -2568734105455881702}
   - component: {fileID: -7758560335398054362}
+  - component: {fileID: 2461360791747415124}
   m_Layer: 6
   m_Name: MageBulletMage
   m_TagString: Untagged
@@ -542,6 +591,7 @@ Transform:
   m_Children:
   - {fileID: 8062575269563605702}
   - {fileID: 8615524848834418261}
+  - {fileID: 2192686817332436947}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -588,6 +638,9 @@ MonoBehaviour:
   moveRange: 5
   moveTime: 1
   lives: 3
+  _shakeMagnitude: 0.1
+  _shakeDuration: 0.5
+  _resetCamera: 1
 --- !u!50 &5611773927954229754
 Rigidbody2D:
   serializedVersion: 4
@@ -801,23 +854,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-2568734105455881702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6793648967875305894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 319c158ccf624de2bdb9f965245401a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 6669051060729727770, guid: 2f56b1f37fe567b48afe60094b71c8a8, type: 3}
-  timeoutBetweenBullets: 3
-  delayFirstShoot: 2
-  shootingSound: {fileID: 8300000, guid: e75b62a2e03c81b4eb5726d04b493f3b, type: 3}
-  sideBulletAngle: 30
 --- !u!114 &-7758560335398054362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,8 +866,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931b716da58043ed8a2763ccce91d9bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.8
   directionScale: 1.5
+--- !u!114 &2461360791747415124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6793648967875305894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48cdb43df803d954e9270bb467a298dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7344523089231090369
 GameObject:
   m_ObjectHideFlags: 0

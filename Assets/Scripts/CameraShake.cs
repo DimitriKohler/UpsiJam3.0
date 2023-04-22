@@ -6,6 +6,7 @@ public class CameraShake : MonoBehaviour
 {
     public float shakeDuration = 0.5f;
     public float shakeMagnitude = 0.1f;
+    public bool resetCamera = true;
 
     private Vector3 originalPosition = new Vector3(0,0,-10);
     private float timeLeft = 0f;
@@ -21,10 +22,10 @@ public class CameraShake : MonoBehaviour
             // Decrease the remaining shake time
             timeLeft -= Time.deltaTime;
         }
-        else
+        else if (resetCamera)
         {
             // Reset the camera position if the shake is finished
-            transform.position = originalPosition;
+            transform.position = new Vector3(0, 0, -10);
         }
     }
 

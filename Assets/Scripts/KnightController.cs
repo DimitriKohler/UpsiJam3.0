@@ -12,6 +12,7 @@ public class KnightController : MonoBehaviour
     private bool canMove = false;
     private Animator knightAnimator;
     private bool cdHurt = false;
+    private bool isDead = false;
     [SerializeField] private GameObject cloudDeathPrefab;
 
 
@@ -20,8 +21,11 @@ public class KnightController : MonoBehaviour
 
     public float speed = 2f;
     public int lives = 3;
+    public float _shakeMagnitude = 0.1f;
+    public float _shakeDuration = 0.5f;
+    public bool _resetCamera = true;
 
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -65,22 +69,27 @@ public class KnightController : MonoBehaviour
             lives -= 1;
             StartCoroutine(HurtAnimation());
 
-            if (lives <= 0)
+            if (lives <= 0 && !isDead)
             {
+                isDead = true;
+
+                _deathAudioSource.Play();
+
                 // Death cloud
                 Instantiate(cloudDeathPrefab, transform.position, Quaternion.identity);
-                _deathAudioSource.Play();
+  
 
                 this.gameObject.GetComponent<Collider2D>().enabled = false;
                 int childCount = this.gameObject.transform.childCount;
                 for (int i = 0; i < childCount; i++)
                 {
-                    this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+                    this.gameObject.transform.GetChild(i).gameObject.SetActive(false);
                 }
 
                 Destroy(this.gameObject, 1f);
-                //cameraShake.shakeDuration = 2;
-                //cameraShake.shakeMagnitude = 4;
+                cameraShake.shakeDuration = _shakeDuration;
+                cameraShake.shakeMagnitude = _shakeMagnitude;
+                cameraShake.resetCamera = _resetCamera;
                 cameraShake.Shake();
             }
             else
