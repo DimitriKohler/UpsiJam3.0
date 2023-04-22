@@ -10,6 +10,7 @@ TagManager:
   - Left
   - Wall
   - Bullet
+  - Hurt
   layers:
   - Default
   - TransparentFX

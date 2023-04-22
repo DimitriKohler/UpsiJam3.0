@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 6669051060729727770, guid: 82804f77708f6e24bb19cbd6f5748b45, type: 3}
-  timeoutBetweenBullets: 1
+  timeoutBetweenBullets: 0.4
   shootingSound: {fileID: 8300000, guid: bb10b13b8450e194bbee2f983bb4df29, type: 3}
 --- !u!82 &7867959405534836068
 AudioSource:
@@ -246,6 +246,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
+  lives: 3
+  livesUI: {fileID: 0}
+  immunityInSeconds: 1
   roomManager: {fileID: 549430436790812082, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
 --- !u!50 &4109762404125182558
 Rigidbody2D:
