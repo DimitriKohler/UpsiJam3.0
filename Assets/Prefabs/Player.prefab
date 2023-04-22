@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2e8995cde64424a88c05287b81abc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 25
+  movementSpeed: 5
   roomManager: {fileID: 549430436790812082, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
 --- !u!50 &4109762404125182558
 Rigidbody2D:
