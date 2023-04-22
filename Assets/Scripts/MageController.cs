@@ -9,6 +9,9 @@ public class MageController : MonoBehaviour
     private GameObject camera;
     private CameraShake cameraShake;
     private bool canMove = false;
+    private Animator mageAnimator;
+    private bool cdHurt = false;
+    [SerializeField] private GameObject cloudDeathPrefab;
 
     public float moveSpeed = 3f; // the speed at which the enemy moves
     public float moveRange = 5f; // the maximum distance the enemy can move from its starting position
@@ -29,6 +32,7 @@ public class MageController : MonoBehaviour
         startingPosition = transform.position;
         targetPosition = GetRandomTargetPosition();
         StartCoroutine(WaitAndStartMoving());
+        mageAnimator = gameObject.GetComponentInChildren<Animator>();
     }
 
     IEnumerator WaitAndStartMoving()
@@ -70,11 +74,15 @@ public class MageController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("Bullet") && !cdHurt)
         {
             lives -= 1;
+            StartCoroutine(HurtAnimation());
             if (lives <= 0)
             {
+                // Death cloud
+                Instantiate(cloudDeathPrefab, transform.position, Quaternion.identity);
+
                 Destroy(this.gameObject);
                 //cameraShake.shakeDuration = 2;
                 //cameraShake.shakeMagnitude = 4;
@@ -92,4 +100,14 @@ public class MageController : MonoBehaviour
         return startingPosition + randomPoint;
     }
 
+
+    IEnumerator HurtAnimation()
+    {
+        mageAnimator.SetBool("isHurt", true);
+        cdHurt = true;
+        yield return new WaitForSeconds(0.2f);
+        mageAnimator.SetBool("isHurt", false);
+        cdHurt = false;
+
+    }
 }
