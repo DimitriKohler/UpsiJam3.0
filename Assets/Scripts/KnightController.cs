@@ -10,9 +10,14 @@ public class KnightController : MonoBehaviour
     private CameraShake cameraShake;
     private Vector3 startingPosition; // the starting position of the enemy
     private bool canMove = false;
+    private Animator knightAnimator;
+    private bool cdHurt = false;
+    [SerializeField] private GameObject cloudDeathPrefab;
 
     public float speed = 2f;
     public int lives = 3;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +27,7 @@ public class KnightController : MonoBehaviour
         cameraShake = camera.GetComponent<CameraShake>();
         startingPosition = transform.position;
         StartCoroutine(WaitAndStartMoving());
+        knightAnimator = gameObject.GetComponentInChildren<Animator>();
     }
 
     IEnumerator WaitAndStartMoving()
@@ -48,17 +54,32 @@ public class KnightController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("Bullet") && !cdHurt)
         {
             lives -= 1;
+            StartCoroutine(HurtAnimation());
+
             if (lives <= 0)
             {
+                // Death cloud
+                Instantiate(cloudDeathPrefab, transform.position, Quaternion.identity);
+
                 Destroy(this.gameObject);
                 //cameraShake.shakeDuration = 2;
                 //cameraShake.shakeMagnitude = 4;
                 cameraShake.Shake();
             }
         }
+    }
+
+    IEnumerator HurtAnimation()
+    {
+        knightAnimator.SetBool("isHurt", true);
+        cdHurt = true;
+        yield return new WaitForSeconds(0.2f);
+        knightAnimator.SetBool("isHurt", false);
+        cdHurt = false;
+
     }
 
 }
