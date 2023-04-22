@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private bool isImmune = false;
     [SerializeField] private GameObject livesUI;
     [SerializeField] private GameObject heart;
+    [SerializeField] private float heartScaleFactor = 1.2f;
     [SerializeField] private string gameLostScene;
 
     public GameObject roomManager;
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
     private AudioSource _hurtAudioSource;
     private Collider2D _collider;
     private readonly Stack<GameObject> _hearts = new Stack<GameObject>();
+    private GridLayoutGroup _livesLayout;
     
     // Start is called before the first frame update
     void Start()
@@ -41,7 +44,8 @@ public class PlayerController : MonoBehaviour
         _collider = GetComponents<Collider2D>()[0];
         _animator = GetComponentInChildren<Animator>();
 
-        // Display as many hearts as there are lives
+         _livesLayout = livesUI.GetComponent<GridLayoutGroup>();
+         // Display as many hearts as there are lives
         for (int i = 0; i < lives; i++)
         {
             _hearts.Push(Instantiate(heart, livesUI.transform));
@@ -126,6 +130,11 @@ public class PlayerController : MonoBehaviour
             TakeHit();
             Destroy(other.gameObject);
         }
+        else if (other.CompareTag("Heart"))
+        {
+            IncrementLives();
+            Destroy(other.gameObject);
+        }
     }
 
     private void TakeHit()
@@ -185,6 +194,16 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(gameLostScene, LoadSceneMode.Single);
         }
+
+        _livesLayout.cellSize /= heartScaleFactor;
         Destroy(_hearts.Pop());
+    }
+    
+    private void IncrementLives()
+    {
+        lives++;
+        Debug.Log(lives);
+        _livesLayout.cellSize *= heartScaleFactor;
+        _hearts.Push(Instantiate(heart, livesUI.transform));
     }
 }

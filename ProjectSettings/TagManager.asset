@@ -12,6 +12,7 @@ TagManager:
   - Bullet
   - Hurt
   - HurtBullet
+  - Heart
   layers:
   - Default
   - TransparentFX
