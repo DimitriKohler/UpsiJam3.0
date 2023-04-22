@@ -35,12 +35,14 @@ public class RoomManagerScript : MonoBehaviour
 
     public void NextRoom()
     {
+        Debug.Log("NEXT");
+
         currentRoomIndex += 1;
 
         if (currentRoomIndex >= roomList.Length)
         {
             currentRoomIndex = 0;
-            Debug.LogError("Room index out of bounds, return to 0");
+            //Debug.LogError("Room index out of bounds, return to 0");
         }
 
         Destroy(CurrentRoomObj);
