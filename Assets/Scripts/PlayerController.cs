@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         horizontalMovement = Input.GetAxis("Horizontal");
-        verticalMovement = Input.GetAxis("Vertical");
+        verticalMovement = Input.GetAxis("Vertical");        
     }
 
     // Update is called once per frame
@@ -111,6 +111,11 @@ public class PlayerController : MonoBehaviour
             Vector3 leftPos = new Vector3(-7.5f, 0, 0);
 
             StartCoroutine(ResetPlayerPosition(leftPos));
+        }
+
+        if (other.CompareTag("Gravity"))
+        {
+            this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.75f;
         }
     }
 
@@ -180,6 +185,7 @@ public class PlayerController : MonoBehaviour
             }
 
             transform.position = playerPos;
+            this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
 
             fadeController.FadeToScene();
 
