@@ -1181,9 +1181,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: tutoRoomList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: tutoRoomList.Array.data[0]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: e9c5a6ccc8c83674f8958b61f6b8a0fc, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[1]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 67fc5197e98e34c458dfea75b7a8cbfe, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 29f0f6e8ba7dab24e84b311cd3e78819, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: tutoRoomList.Array.data[2]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 97664f08684e7014d9de5bc91117eae4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
 --- !u!1001 &995546310
@@ -1842,6 +1854,10 @@ PrefabInstance:
     - target: {fileID: 4109762404125182558, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410709987015999646, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}

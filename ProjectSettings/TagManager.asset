@@ -13,6 +13,11 @@ TagManager:
   - Hurt
   - HurtBullet
   - Heart
+  - Gravity
+  - RecycleBin
+  - Quit
+  - Folder
+  - End
   - Trash
   layers:
   - Default
