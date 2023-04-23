@@ -17,12 +17,15 @@ public class UnPauseGame : MonoBehaviour
     void Start()
     {
         var button = GetComponent<Button>();
-        button.onClick.AddListener(() =>
-        {
-            Time.timeScale = 1;
-            //Constants.Constant.PAUSE = false;
-            pauseOverlay.SetActive(false);
-        });
+        button.onClick.AddListener(UnPause);
+    }
+
+    void UnPause()
+    {
+        Debug.Log("unpause");
+        Time.timeScale = 1;
+        //Constants.Constant.PAUSE = false;
+        pauseOverlay.SetActive(false);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -33,11 +36,5 @@ public class UnPauseGame : MonoBehaviour
             audioSourceEnter = gameObject.AddComponent<AudioSource>();
 
         audioSourceEnter.PlayOneShot(AudioClipEnter);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
