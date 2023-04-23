@@ -568,7 +568,6 @@ GameObject:
   - component: {fileID: 5611773927954229754}
   - component: {fileID: 7532362202040753590}
   - component: {fileID: 1723931632122378933}
-  - component: {fileID: -2568734105455881702}
   m_Layer: 6
   m_Name: Mage_animGlitch
   m_TagString: Untagged
@@ -853,23 +852,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-2568734105455881702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6793648967875305894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 319c158ccf624de2bdb9f965245401a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 6669051060729727770, guid: 2f56b1f37fe567b48afe60094b71c8a8, type: 3}
-  timeoutBetweenBullets: 1.5
-  delayFirstShoot: 2
-  shootingSound: {fileID: 8300000, guid: e75b62a2e03c81b4eb5726d04b493f3b, type: 3}
-  sideBulletAngle: 30
 --- !u!1 &7344523089231090369
 GameObject:
   m_ObjectHideFlags: 0
