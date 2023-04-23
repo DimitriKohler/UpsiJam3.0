@@ -316,6 +316,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3148615593248389601, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148615593248389601, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148615593248389601, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 260
+      objectReference: {fileID: 0}
     - target: {fileID: 3148615593248389606, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
       propertyPath: m_text
       value: You lost!
