@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 1f;
     public int lives = 3;
+    public int maxLives = 20;
     public float immunityInSeconds;
     private bool isImmune = false;
     [SerializeField] private GameObject livesUI;
@@ -250,6 +251,11 @@ public class PlayerController : MonoBehaviour
     
     private void IncrementLives()
     {
+        if (lives >= maxLives)
+        {
+            return;
+        }
+        
         lives++;
         Debug.Log(lives);
         _livesLayout.cellSize *= heartScaleFactor;
