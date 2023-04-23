@@ -131,10 +131,16 @@ public class MageController : MonoBehaviour
 
     IEnumerator HurtAnimation()
     {
-        mageAnimator.SetBool("isHurt", true);
+        if (mageAnimator)
+        {
+            mageAnimator.SetBool("isHurt", true);
+        }
         cdHurt = true;
         yield return new WaitForSeconds(0.2f);
-        mageAnimator.SetBool("isHurt", false);
+        if (mageAnimator)
+        {
+            mageAnimator.SetBool("isHurt", false);
+        }
         cdHurt = false;
 
     }

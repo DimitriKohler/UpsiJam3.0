@@ -1198,7 +1198,7 @@ PrefabInstance:
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[3]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 43da29d2343609247a7316698fd60573, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 2e30445f66a85e34b889452f1973bd14, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: lowGlitchRoomList.Array.size
       value: 2

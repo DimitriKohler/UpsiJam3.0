@@ -94,17 +94,26 @@ public class KnightController : MonoBehaviour
             }
             else
             {
-                _hitAudioSource.Play();
+                if (_hitAudioSource)
+                {
+                    _hitAudioSource.Play();
+                }
             }
         }
     }
 
     IEnumerator HurtAnimation()
     {
-        knightAnimator.SetBool("isHurt", true);
+        if (knightAnimator)
+        {
+            knightAnimator.SetBool("isHurt", true);
+        }
         cdHurt = true;
         yield return new WaitForSeconds(0.2f);
-        knightAnimator.SetBool("isHurt", false);
+        if (knightAnimator)
+        {
+            knightAnimator.SetBool("isHurt", false);
+        }
         cdHurt = false;
 
     }

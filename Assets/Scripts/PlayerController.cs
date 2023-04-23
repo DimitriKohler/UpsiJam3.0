@@ -243,6 +243,7 @@ public class PlayerController : MonoBehaviour
         if (lives <= 0)
         {
             SceneManager.LoadScene(gameLostScene, LoadSceneMode.Single);
+            return;
         }
 
         _livesLayout.cellSize /= heartScaleFactor;
