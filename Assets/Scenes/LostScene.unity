@@ -496,6 +496,10 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8245186760578097359, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 732
+      objectReference: {fileID: 0}
     - target: {fileID: 9001232343254302691, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

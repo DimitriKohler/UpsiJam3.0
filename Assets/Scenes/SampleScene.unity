@@ -570,9 +570,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: -0.00091242045
     y: 0
-    width: 1
+    width: 1.0018249
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -914,7 +914,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Chose a hero
+  m_text: Choose a hero
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f438a902611a3549bc6fdf27e5424d9, type: 2}
   m_sharedMaterial: {fileID: 5208710985014150109, guid: 5f438a902611a3549bc6fdf27e5424d9, type: 2}
@@ -1481,7 +1481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You choose Slime... Wait what?
+  m_text: You chose Slime... Wait what?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f438a902611a3549bc6fdf27e5424d9, type: 2}
   m_sharedMaterial: {fileID: 5208710985014150109, guid: 5f438a902611a3549bc6fdf27e5424d9, type: 2}
