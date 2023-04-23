@@ -103,6 +103,14 @@ public class PlayerController : MonoBehaviour
 
             StartCoroutine(ResetPlayerPosition(topPos));
         }
+        else if (other.CompareTag("BottomP"))
+        {
+            isMovable = false;
+
+            Vector3 topPos = new Vector3(0, 3.5f, 0);
+
+            StartCoroutine(ResetPlayerPositionP(topPos));
+        }
         else if (other.CompareTag("Left"))
         {
             isMovable = false;            
@@ -118,6 +126,14 @@ public class PlayerController : MonoBehaviour
             Vector3 leftPos = new Vector3(-7.5f, 0, 0);
 
             StartCoroutine(ResetPlayerPosition(leftPos));
+        }
+        else if (other.CompareTag("RightP"))
+        {
+            isMovable = false;
+
+            Vector3 leftPos = new Vector3(-7.5f, 0, 0);
+
+            StartCoroutine(ResetPlayerPositionP(leftPos));
         }
 
         // Gravity Room
@@ -235,7 +251,48 @@ public class PlayerController : MonoBehaviour
             isReseting = false;
         }
     }
-    
+
+    IEnumerator ResetPlayerPositionP(Vector3 playerPos)
+    {
+        if (!isReseting)
+        {
+            isReseting = true;
+            fadeController.FadeToBlack();
+
+            yield return new WaitForSeconds(0.5f);
+
+            roomManagerScript.PreviousRoom();
+            // Find all game objects with the "Bullet" tag
+            GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+            GameObject[] hurtBullets = GameObject.FindGameObjectsWithTag("HurtBullet");
+            GameObject[] trashes = GameObject.FindGameObjectsWithTag("Trash");
+
+            // Loop through the bullets array and destroy each bullet
+            foreach (GameObject bullet in bullets)
+            {
+                Destroy(bullet);
+            }
+            foreach (GameObject bullet in hurtBullets)
+            {
+                Destroy(bullet);
+            }
+            foreach (GameObject trash in trashes)
+            {
+                Destroy(trash);
+            }
+
+            transform.position = playerPos;
+            this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+
+            fadeController.FadeToScene();
+
+            yield return new WaitForSeconds(0.5f);
+
+            isMovable = true;
+            isReseting = false;
+        }
+    }
+
     private void DecrementLives()
     {
         lives--;

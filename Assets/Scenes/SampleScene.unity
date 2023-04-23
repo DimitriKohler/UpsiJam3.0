@@ -218,7 +218,7 @@ RectTransform:
   m_Children:
   - {fileID: 2038133302}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -338,7 +338,7 @@ RectTransform:
   - {fileID: 788610832}
   - {fileID: 1288550789}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -633,7 +633,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &519420033
 MonoBehaviour:
@@ -682,7 +682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6863582876819941219, guid: 25ef944c41f51ba41b28f7a8d7b6e393, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6863582876819941219, guid: 25ef944c41f51ba41b28f7a8d7b6e393, type: 3}
       propertyPath: m_AnchorMax.x
@@ -880,7 +880,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &788610831
 GameObject:
@@ -1163,7 +1163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2296769772778631224, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2296769772778631224, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1207,7 +1207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[0]
@@ -1225,6 +1225,10 @@ PrefabInstance:
       propertyPath: tutoRoomList.Array.data[3]
       value: 
       objectReference: {fileID: 9221800058787518647, guid: 6235ec4e0708a2444ae20a4c06186b27, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: tutoRoomList.Array.data[4]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 346819c0a4b7b7e49923cd94fbaf7090, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: lowGlitchRoomList.Array.size
       value: 2
@@ -1305,7 +1309,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &995546310
 PrefabInstance:
@@ -1874,7 +1878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109762404125182555, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4109762404125182555, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2228,7 +2232,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2271570629042588899
 PrefabInstance:
@@ -2251,7 +2255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2271570629163704684, guid: b85947625feb26540a65025d28e4ab95, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2271570629163704684, guid: b85947625feb26540a65025d28e4ab95, type: 3}
       propertyPath: m_AnchorMax.x

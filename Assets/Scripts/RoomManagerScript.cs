@@ -91,4 +91,12 @@ public class RoomManagerScript : MonoBehaviour
         Destroy(CurrentRoomObj);
         SpawnRoom(currentRoomIndex);
     }
+
+    public void PreviousRoom()
+    {
+        currentRoomIndex -= 1;
+
+        Destroy(CurrentRoomObj);
+        SpawnRoom(currentRoomIndex);
+    }
 }
