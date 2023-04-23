@@ -596,9 +596,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: -0.0008282997
     y: 0
-    width: 1
+    width: 1.0016567
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -1206,8 +1206,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: middleGlitchRoom
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: e666ba7f1f8e8784b9058a916f47f828, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: lowGlitchRoomCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: highGlitchRoomCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.size
-      value: 5
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: endgameRoomList.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[0]
@@ -1216,31 +1232,87 @@ PrefabInstance:
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[1]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 33c8a03fe1a1b7142a215b2b6954f044, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 9ec5b75edd390ef4c983e708e16bf002, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[2]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 43da29d2343609247a7316698fd60573, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 19f838a36d8acc24f87dcb69e9322501, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[3]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 6235ec4e0708a2444ae20a4c06186b27, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 09021bcc32489b044a75da704d35031c, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[4]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 346819c0a4b7b7e49923cd94fbaf7090, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 8e576e50b8d587f4295420f6f136148c, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: tutoRoomList.Array.data[5]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: d7a0ef8231a6f10459d8afd58871fc42, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: lowGlitchRoomList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: endgameRoomList.Array.data[0]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 2e21614aec5e57b4ab7fe8783cb9afff, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: endgameRoomList.Array.data[1]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: a2d40bb7e3d951b4e8ca9d16208f0fc2, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: endgameRoomList.Array.data[2]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 63f455d90f399e74998237952d62c5c3, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: endgameRoomList.Array.data[3]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: c75cb8344e68ca24e89e1b229428645e, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: endgameRoomList.Array.data[4]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 9999c31fd6392c242a9f2a5addd8a125, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: endgameRoomList.Array.data[5]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 346819c0a4b7b7e49923cd94fbaf7090, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: highGlitchRoomList.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: lowGlitchRoomList.Array.data[0]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: e666ba7f1f8e8784b9058a916f47f828, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: fdf2042d5c7bd814b971f032303852d5, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: lowGlitchRoomList.Array.data[1]
       value: 
+      objectReference: {fileID: 9221800058787518647, guid: f8a5bd6b7843ed34c83fdc0ba5f417f6, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: lowGlitchRoomList.Array.data[2]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 67fc5197e98e34c458dfea75b7a8cbfe, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: lowGlitchRoomList.Array.data[3]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 166a032ed19b89640a3e9f3ab096ac4f, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: lowGlitchRoomList.Array.data[4]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 2e30445f66a85e34b889452f1973bd14, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: lowGlitchRoomList.Array.data[5]
+      value: 
       objectReference: {fileID: 9221800058787518647, guid: 4ce9f82ec2b2f1c41a75ea0fdc8e8877, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: highGlitchRoomList.Array.data[0]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 33c8a03fe1a1b7142a215b2b6954f044, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: highGlitchRoomList.Array.data[1]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 43da29d2343609247a7316698fd60573, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
 --- !u!1 &949615044
