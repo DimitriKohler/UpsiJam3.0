@@ -226,8 +226,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.1402, y: 6.7195}
-  m_SizeDelta: {x: 1347.7197, y: 736}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1280, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &714877248
 MonoBehaviour:
@@ -305,10 +305,10 @@ RectTransform:
   m_Father: {fileID: 1392398810}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 65, y: 328}
-  m_SizeDelta: {x: 0, y: 200}
+  m_SizeDelta: {x: 1280, y: 200}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &995467677
 CanvasRenderer:
@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 1392398809}
   - component: {fileID: 1392398808}
   - component: {fileID: 1392398807}
+  - component: {fileID: 1392398811}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -398,7 +399,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -448,6 +449,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1392398811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392398806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004db3d874cdad448af238ffebed7cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1475420850
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3638782405281124867, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3638782405281124867, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
       propertyPath: m_AnchorMax.y
@@ -595,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3638782405281124867, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3638782405281124867, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
       propertyPath: m_AnchorMin.y
@@ -603,7 +616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3638782405281124867, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -700
+      value: 580
       objectReference: {fileID: 0}
     - target: {fileID: 3638782405281124867, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
       propertyPath: m_SizeDelta.y
@@ -662,6 +675,10 @@ PrefabInstance:
       value: Buttons
       objectReference: {fileID: 0}
     - target: {fileID: 7288901460649922918, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288901460649922918, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -686,7 +703,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288901462036485736, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288901462036485736, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288901462036485736, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288901462036485736, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
