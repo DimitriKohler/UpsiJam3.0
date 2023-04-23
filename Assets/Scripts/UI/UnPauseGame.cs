@@ -6,11 +6,6 @@ using UnityEngine.EventSystems;
 
 public class UnPauseGame : MonoBehaviour
 {
-
-    public AudioClip AudioClipEnter;
-    private AudioSource audioSourceEnter;
-
-
     public GameObject pauseOverlay;
     
     // Start is called before the first frame update
@@ -26,15 +21,5 @@ public class UnPauseGame : MonoBehaviour
         Time.timeScale = 1;
         //Constants.Constant.PAUSE = false;
         pauseOverlay.SetActive(false);
-    }
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        if (audioSourceEnter == null)
-            audioSourceEnter = GetComponent<AudioSource>();
-        if (audioSourceEnter == null)
-            audioSourceEnter = gameObject.AddComponent<AudioSource>();
-
-        audioSourceEnter.PlayOneShot(AudioClipEnter);
     }
 }

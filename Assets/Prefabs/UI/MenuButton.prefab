@@ -246,8 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0004f7f067d4344851dc4b187113293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioClipEnter: {fileID: 8300000, guid: 0d218606604e4a44f97be832087042d6, type: 3}
-  AudioClipPressed: {fileID: 8300000, guid: 0d218606604e4a44f97be832087042d6, type: 3}
+  AudioClipEnter: {fileID: 8300000, guid: b3dca93bbeb58274899c92e55d34d357, type: 3}
+  AudioClipPressed: {fileID: 8300000, guid: 0478f8af9c3034b48a4ed752b64e9fbf, type: 3}
 --- !u!1 &1512082733372992486
 GameObject:
   m_ObjectHideFlags: 0
