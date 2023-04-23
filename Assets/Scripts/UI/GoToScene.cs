@@ -15,6 +15,7 @@ public class GoToScene : MonoBehaviour
 
     void StartGame()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }
