@@ -567,7 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  lives: 3
+  lives: 7
   _shakeMagnitude: 0.1
   _shakeDuration: 0.5
   _resetCamera: 1
