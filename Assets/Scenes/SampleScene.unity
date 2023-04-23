@@ -2372,6 +2372,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 615708322}
     - target: {fileID: 4109762404125182556, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
+      propertyPath: gameEndScene
+      value: WinScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109762404125182556, guid: 870a1bbef8983894e8db2d71b81f2b8d, type: 3}
       propertyPath: gameLostScene
       value: LostScene
       objectReference: {fileID: 0}
