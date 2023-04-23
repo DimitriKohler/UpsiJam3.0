@@ -1435,15 +1435,15 @@ PrefabInstance:
       objectReference: {fileID: 9221800058787518647, guid: e666ba7f1f8e8784b9058a916f47f828, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: lowGlitchRoomCount
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: highGlitchRoomCount
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: endgameRoomList.Array.size
@@ -1456,19 +1456,19 @@ PrefabInstance:
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[1]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: c75cb8344e68ca24e89e1b229428645e, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 9ec5b75edd390ef4c983e708e16bf002, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[2]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 9999c31fd6392c242a9f2a5addd8a125, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 19f838a36d8acc24f87dcb69e9322501, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[3]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 346819c0a4b7b7e49923cd94fbaf7090, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 09021bcc32489b044a75da704d35031c, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[4]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: d7a0ef8231a6f10459d8afd58871fc42, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 8e576e50b8d587f4295420f6f136148c, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[5]
       value: 
@@ -1503,7 +1503,7 @@ PrefabInstance:
       objectReference: {fileID: 9221800058787518647, guid: 346819c0a4b7b7e49923cd94fbaf7090, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: highGlitchRoomList.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: lowGlitchRoomList.Array.data[0]
@@ -1552,7 +1552,7 @@ PrefabInstance:
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: highGlitchRoomList.Array.data[2]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 14ed142f715e07f4f8d5b510bfc4fd55, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 64a59ae3a07a8774d98f0512ee46912b, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: highGlitchRoomList.Array.data[3]
       value: 
@@ -1561,6 +1561,10 @@ PrefabInstance:
       propertyPath: highGlitchRoomList.Array.data[4]
       value: 
       objectReference: {fileID: 9221800058787518647, guid: 775aff799c3dc914ebe18377324d2820, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: highGlitchRoomList.Array.data[5]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: b33a8cc28a8324e48a2e4d918a2635ee, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
 --- !u!1 &949615044
