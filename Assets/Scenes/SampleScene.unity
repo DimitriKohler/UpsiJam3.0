@@ -1439,11 +1439,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: highGlitchRoomCount
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: endgameRoomList.Array.size
@@ -1456,7 +1456,7 @@ PrefabInstance:
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[1]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: c75cb8344e68ca24e89e1b229428645e, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 9999c31fd6392c242a9f2a5addd8a125, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[2]
       value: 
@@ -1475,7 +1475,7 @@ PrefabInstance:
       objectReference: {fileID: 9221800058787518647, guid: d7a0ef8231a6f10459d8afd58871fc42, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: lowGlitchRoomList.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: endgameRoomList.Array.data[0]
@@ -1503,7 +1503,7 @@ PrefabInstance:
       objectReference: {fileID: 9221800058787518647, guid: 346819c0a4b7b7e49923cd94fbaf7090, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: highGlitchRoomList.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: lowGlitchRoomList.Array.data[0]
@@ -1530,6 +1530,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9221800058787518647, guid: 4ce9f82ec2b2f1c41a75ea0fdc8e8877, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: lowGlitchRoomList.Array.data[6]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: cc652ce2d0cd8644aad5b4c2313ac1ca, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: lowGlitchRoomList.Array.data[7]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 774d4de18f74abe4f83b95ef24355ab5, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: lowGlitchRoomList.Array.data[8]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 4ce9f82ec2b2f1c41a75ea0fdc8e8877, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: highGlitchRoomList.Array.data[0]
       value: 
       objectReference: {fileID: 9221800058787518647, guid: 33c8a03fe1a1b7142a215b2b6954f044, type: 3}
@@ -1541,6 +1553,14 @@ PrefabInstance:
       propertyPath: highGlitchRoomList.Array.data[2]
       value: 
       objectReference: {fileID: 9221800058787518647, guid: 14ed142f715e07f4f8d5b510bfc4fd55, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: highGlitchRoomList.Array.data[3]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 1474309fa26f2934a81f21d32ad526b6, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: highGlitchRoomList.Array.data[4]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 775aff799c3dc914ebe18377324d2820, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
 --- !u!1 &949615044
