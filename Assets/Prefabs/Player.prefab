@@ -153,7 +153,7 @@ MonoBehaviour:
   projectile: {fileID: 6669051060729727770, guid: 82804f77708f6e24bb19cbd6f5748b45, type: 3}
   timeoutBetweenBullets: 0.25
   shootingSound: {fileID: 8300000, guid: bb10b13b8450e194bbee2f983bb4df29, type: 3}
-  bulletSpeed: 1
+  bulletSpeed: 12
 --- !u!82 &7867959405534836068
 AudioSource:
   m_ObjectHideFlags: 0

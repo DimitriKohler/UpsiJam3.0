@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6793648967875305895}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5469722793011361593
 SpriteRenderer:
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 2cd72a68113c3984bade2ff20d24c227, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -622,6 +622,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 5497739244651167855}
   - {fileID: 8062575269563605702}
   - {fileID: 8615524848834418261}
   - {fileID: 3840061494960223084}
@@ -666,11 +667,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1530484d460da74e891540a52d43913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloudDeathPrefab: {fileID: 7489488551096258145, guid: ceae90291d1d9a44fae2daf70b978094, type: 3}
+  cloudDeathPrefab: {fileID: 3838644327934393416, guid: 1e08caddb58fd9444a2f80c67f4d6f0f, type: 3}
   moveSpeed: 1
   moveRange: 5
   moveTime: 1
   lives: 3
+  _shakeMagnitude: 0.1
+  _shakeDuration: 0.5
+  _resetCamera: 1
 --- !u!50 &5611773927954229754
 Rigidbody2D:
   serializedVersion: 4
@@ -702,7 +706,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e2056d506459b5948a99308c65a7ee2f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 586cbb85f9ee6c34680d41580112247f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -798,7 +802,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 35067327c965da94e896bc20a51fcb27, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1eb9c2739f666bd42b33be95a85cb429, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -919,7 +923,7 @@ Transform:
   - {fileID: 1220731115002368428}
   - {fileID: 6040851332339299821}
   m_Father: {fileID: 6793648967875305895}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8503529778074306758
 Animator:
@@ -941,6 +945,55 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &7792319416917646762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5497739244651167855}
+  - component: {fileID: 788512953089555619}
+  m_Layer: 6
+  m_Name: MageShooter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5497739244651167855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792319416917646762}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.49, y: 2.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6793648967875305895}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &788512953089555619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792319416917646762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319c158ccf624de2bdb9f965245401a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 6669051060729727770, guid: 2f56b1f37fe567b48afe60094b71c8a8, type: 3}
+  timeoutBetweenBullets: 1.25
+  delayFirstShoot: 2
+  shootingSound: {fileID: 8300000, guid: e75b62a2e03c81b4eb5726d04b493f3b, type: 3}
+  sideBulletAngle: 60
 --- !u!1 &9019363190909129042
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,7 +1024,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6793648967875305895}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6693586173767281190
 BoxCollider2D:

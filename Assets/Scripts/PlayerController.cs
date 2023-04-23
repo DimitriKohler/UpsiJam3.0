@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private float horizontalMovement;
     private float verticalMovement;
 
-    private bool isMovable = true;
+    public bool isMovable = true;
     private bool isReseting = false;
 
     private FadeController fadeController;
@@ -173,6 +173,7 @@ public class PlayerController : MonoBehaviour
             // Find all game objects with the "Bullet" tag
             GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
             GameObject[] hurtBullets = GameObject.FindGameObjectsWithTag("HurtBullet");
+            GameObject[] trashes = GameObject.FindGameObjectsWithTag("Trash");
 
             // Loop through the bullets array and destroy each bullet
             foreach (GameObject bullet in bullets)
@@ -182,6 +183,10 @@ public class PlayerController : MonoBehaviour
             foreach (GameObject bullet in hurtBullets)
             {
                 Destroy(bullet);
+            }
+            foreach (GameObject trash in trashes)
+            {
+                Destroy(trash);
             }
 
             transform.position = playerPos;

@@ -441,7 +441,7 @@ Animator:
   m_GameObject: {fileID: 4883489861122818299}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 46032fa49f7d4084dacebb802772596d, type: 2}
+  m_Controller: {fileID: 9100000, guid: abed48012ae2e064fbda7ab7999f2f95, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -630,12 +630,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3851274654730432290}
   - component: {fileID: -8105902646930223656}
-  - component: {fileID: -6754868420011456708}
+  - component: {fileID: 2156653036837531132}
   - component: {fileID: 5766602740721793735}
   - component: {fileID: 4441142509539845374}
   - component: {fileID: 898339293652894888}
   m_Layer: 6
-  m_Name: Knight_animGlitch
+  m_Name: KnightBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -684,7 +684,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1950872, y: 2.9764395}
   m_EdgeRadius: 0
---- !u!114 &-6754868420011456708
+--- !u!114 &2156653036837531132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -693,15 +693,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 6988127560168908749}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85f68070d8292004d9a93d25bcde3cfa, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b9842832db014d4b911733f0ac5342e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cloudDeathPrefab: {fileID: 7489488551096258145, guid: ceae90291d1d9a44fae2daf70b978094, type: 3}
-  speed: 2
+  speed: 1
   lives: 10
-  _shakeMagnitude: 0.1
-  _shakeDuration: 0.5
-  _resetCamera: 1
+  _shakeMagnitude: 3
+  _shakeDuration: 1
+  _resetCamera: 0
 --- !u!50 &5766602740721793735
 Rigidbody2D:
   serializedVersion: 4
