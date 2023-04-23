@@ -334,20 +334,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3148615593248389606, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
       propertyPath: m_text
-      value: You lost!
+      value: You Won!
       objectReference: {fileID: 0}
     - target: {fileID: 3148615593248389606, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
       propertyPath: m_fontSize
-      value: 83.3
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 3148615593248389606, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: a068b9fe897c5974a942bccd50c6b3e9, type: 2}
     - target: {fileID: 3148615593248389606, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.47828504
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148615593248389606, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148615593248389606, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.37169808
+      objectReference: {fileID: 0}
+    - target: {fileID: 3148615593248389606, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -2579932611914765527, guid: a068b9fe897c5974a942bccd50c6b3e9, type: 2}
+    - target: {fileID: 3148615593248389606, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4286250847
+      objectReference: {fileID: 0}
     - target: {fileID: 3148615593436494982, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5

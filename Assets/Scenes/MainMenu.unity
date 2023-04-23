@@ -674,6 +674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Buttons
       objectReference: {fileID: 0}
+    - target: {fileID: 3638782406416773626, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
+      propertyPath: sceneName
+      value: HelpScene
+      objectReference: {fileID: 0}
     - target: {fileID: 7288901460649922918, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

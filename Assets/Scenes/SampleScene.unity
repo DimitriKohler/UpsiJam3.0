@@ -2380,6 +2380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContinueButton
       objectReference: {fileID: 0}
+    - target: {fileID: 2336184225325065909, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2947335263740470955, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
       propertyPath: m_fontSize
       value: 43.45
@@ -2426,7 +2430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3638782405281124867, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 375
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 3638782405281124867, guid: 79a8c1e069085224fa9b331d2883c859, type: 3}
       propertyPath: m_LocalPosition.x
