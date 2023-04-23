@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 6669051060729727770, guid: 2f56b1f37fe567b48afe60094b71c8a8, type: 3}
-  timeoutBetweenBullets: 1.25
+  timeoutBetweenBullets: 2.5
   delayFirstShoot: 2
   shootingSound: {fileID: 8300000, guid: e75b62a2e03c81b4eb5726d04b493f3b, type: 3}
   sideBulletAngle: 30

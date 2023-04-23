@@ -221,24 +221,8 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             roomManagerScript.NextRoom();
-            // Find all game objects with the "Bullet" tag
-            GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
-            GameObject[] hurtBullets = GameObject.FindGameObjectsWithTag("HurtBullet");
-            GameObject[] trashes = GameObject.FindGameObjectsWithTag("Trash");
 
-            // Loop through the bullets array and destroy each bullet
-            foreach (GameObject bullet in bullets)
-            {
-                Destroy(bullet);
-            }
-            foreach (GameObject bullet in hurtBullets)
-            {
-                Destroy(bullet);
-            }
-            foreach (GameObject trash in trashes)
-            {
-                Destroy(trash);
-            }
+            ClearRoom();
 
             transform.position = playerPos;
             this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -262,24 +246,8 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             roomManagerScript.PreviousRoom();
-            // Find all game objects with the "Bullet" tag
-            GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
-            GameObject[] hurtBullets = GameObject.FindGameObjectsWithTag("HurtBullet");
-            GameObject[] trashes = GameObject.FindGameObjectsWithTag("Trash");
 
-            // Loop through the bullets array and destroy each bullet
-            foreach (GameObject bullet in bullets)
-            {
-                Destroy(bullet);
-            }
-            foreach (GameObject bullet in hurtBullets)
-            {
-                Destroy(bullet);
-            }
-            foreach (GameObject trash in trashes)
-            {
-                Destroy(trash);
-            }
+            ClearRoom();
 
             transform.position = playerPos;
             this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -330,19 +298,8 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             roomManagerScript.NextRoom();
-            // Find all game objects with the "Bullet" tag
-            GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
-            GameObject[] hurtBullets = GameObject.FindGameObjectsWithTag("HurtBullet");
 
-            // Loop through the bullets array and destroy each bullet
-            foreach (GameObject bullet in bullets)
-            {
-                Destroy(bullet);
-            }
-            foreach (GameObject bullet in hurtBullets)
-            {
-                Destroy(bullet);
-            }
+            ClearRoom();
 
             transform.position = playerPos;
             this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -371,19 +328,8 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
 
             roomManagerScript.NextRoom();
-            // Find all game objects with the "Bullet" tag
-            GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
-            GameObject[] hurtBullets = GameObject.FindGameObjectsWithTag("HurtBullet");
 
-            // Loop through the bullets array and destroy each bullet
-            foreach (GameObject bullet in bullets)
-            {
-                Destroy(bullet);
-            }
-            foreach (GameObject bullet in hurtBullets)
-            {
-                Destroy(bullet);
-            }
+            ClearRoom();
 
             transform.position = playerPos;
             this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -396,6 +342,38 @@ public class PlayerController : MonoBehaviour
             isMovable = true;
             isReseting = false;
             isHidden = true;
+        }
+    }
+
+    private void ClearRoom()
+    {
+        // Find all game objects with the "Bullet" tag
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+        GameObject[] hurtBullets = GameObject.FindGameObjectsWithTag("HurtBullet");
+        GameObject[] trashes = GameObject.FindGameObjectsWithTag("Trash");
+        GameObject[] ennemies = GameObject.FindGameObjectsWithTag("Hurt");
+        GameObject[] hearts = GameObject.FindGameObjectsWithTag("Heart");
+
+        // Loop through the bullets array and destroy each bullet
+        foreach (GameObject bullet in bullets)
+        {
+            Destroy(bullet);
+        }
+        foreach (GameObject bullet in hurtBullets)
+        {
+            Destroy(bullet);
+        }
+        foreach (GameObject trash in trashes)
+        {
+            Destroy(trash);
+        }
+        foreach (GameObject ennemy in ennemies)
+        {
+            //Destroy(ennemy);
+        }
+        foreach (GameObject heart in hearts)
+        {
+            Destroy(heart);
         }
     }
 

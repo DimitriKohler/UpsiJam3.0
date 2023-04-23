@@ -596,9 +596,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.0008282997
+    x: 0
     y: 0
-    width: 1.0016567
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -1211,15 +1211,15 @@ PrefabInstance:
       objectReference: {fileID: 9221800058787518647, guid: e666ba7f1f8e8784b9058a916f47f828, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: lowGlitchRoomCount
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: highGlitchRoomCount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.size
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: endgameRoomList.Array.size
@@ -1232,19 +1232,19 @@ PrefabInstance:
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[1]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 9ec5b75edd390ef4c983e708e16bf002, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 14ed142f715e07f4f8d5b510bfc4fd55, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[2]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 19f838a36d8acc24f87dcb69e9322501, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: d7a0ef8231a6f10459d8afd58871fc42, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[3]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 09021bcc32489b044a75da704d35031c, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: d7a0ef8231a6f10459d8afd58871fc42, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[4]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 8e576e50b8d587f4295420f6f136148c, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: d7a0ef8231a6f10459d8afd58871fc42, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[5]
       value: 
@@ -1279,7 +1279,7 @@ PrefabInstance:
       objectReference: {fileID: 9221800058787518647, guid: 346819c0a4b7b7e49923cd94fbaf7090, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: highGlitchRoomList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: lowGlitchRoomList.Array.data[0]
@@ -1313,6 +1313,10 @@ PrefabInstance:
       propertyPath: highGlitchRoomList.Array.data[1]
       value: 
       objectReference: {fileID: 9221800058787518647, guid: 43da29d2343609247a7316698fd60573, type: 3}
+    - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
+      propertyPath: highGlitchRoomList.Array.data[2]
+      value: 
+      objectReference: {fileID: 9221800058787518647, guid: 14ed142f715e07f4f8d5b510bfc4fd55, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
 --- !u!1 &949615044
