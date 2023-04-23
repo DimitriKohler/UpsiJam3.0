@@ -708,9 +708,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: -0.0008282997
     y: 0
-    width: 1
+    width: 1.0016567
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -1443,7 +1443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: endgameRoomList.Array.size
@@ -1456,7 +1456,7 @@ PrefabInstance:
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[1]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 9999c31fd6392c242a9f2a5addd8a125, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: c75cb8344e68ca24e89e1b229428645e, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[2]
       value: 
@@ -1464,7 +1464,7 @@ PrefabInstance:
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[3]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: d7a0ef8231a6f10459d8afd58871fc42, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 346819c0a4b7b7e49923cd94fbaf7090, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[4]
       value: 
