@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject heart;
     [SerializeField] private float heartScaleFactor = 1.2f;
     [SerializeField] private string gameLostScene;
+    [SerializeField] private string gameEndScene;
 
     public GameObject roomManager;
     private RoomManagerScript roomManagerScript;
@@ -165,8 +166,7 @@ public class PlayerController : MonoBehaviour
         // The End
         if (other.CompareTag("End"))
         {
-            // TODO replace by END scene
-            SceneManager.LoadScene(gameLostScene, LoadSceneMode.Single);
+            SceneManager.LoadScene(gameEndScene, LoadSceneMode.Single);
         }
     }
 

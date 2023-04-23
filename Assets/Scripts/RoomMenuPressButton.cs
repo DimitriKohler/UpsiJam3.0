@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class RoomMenuPressButton : MonoBehaviour
 {
+
+    private AudioSource _clickAudioSource;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _clickAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -21,6 +24,7 @@ public class RoomMenuPressButton : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             transform.GetChild(0).gameObject.SetActive(true);
+            _clickAudioSource.Play();
         }
     }
 }

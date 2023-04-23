@@ -1443,7 +1443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: endgameRoomList.Array.size
@@ -1456,11 +1456,11 @@ PrefabInstance:
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[1]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 14ed142f715e07f4f8d5b510bfc4fd55, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: c75cb8344e68ca24e89e1b229428645e, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[2]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: d7a0ef8231a6f10459d8afd58871fc42, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 9999c31fd6392c242a9f2a5addd8a125, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[3]
       value: 
@@ -1937,7 +1937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e528eb5bb7a631c40aaa84afe9073d57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioClipEnter: {fileID: 0}
   pauseOverlay: {fileID: 63940080}
 --- !u!1 &1680465378
 GameObject:
