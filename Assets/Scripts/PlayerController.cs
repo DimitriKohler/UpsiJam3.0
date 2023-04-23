@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isMovable = true;
     private bool isReseting = false;
+    private bool isHidden = false;
 
     private FadeController fadeController;
     private AudioSource _walkingAudioSource;
@@ -75,11 +76,16 @@ public class PlayerController : MonoBehaviour
         else if (!_walkingAudioSource.isPlaying)
         {
             _walkingAudioSource.Play();
+            if (isHidden)
+            {
+                this.gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            }
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        // Classic Rooms
         if (other.CompareTag("Top"))
         {
             isMovable = false;            
@@ -113,9 +119,37 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(ResetPlayerPosition(leftPos));
         }
 
+        // Gravity Room
         if (other.CompareTag("Gravity"))
         {
             this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.75f;
+        }
+
+        // Desktop Room
+        if (other.CompareTag("Quit"))
+        {
+            isMovable = false;
+
+            Vector3 iconPos = new Vector3(-4.81f, 0.96f, 0);
+
+            StartCoroutine(ResetPlayerPositionDesktop(iconPos));
+        }
+
+        // Folder Room
+        if (other.CompareTag("Folder"))
+        {
+            isMovable = false;
+
+            Vector3 startPos = new Vector3(-3f, -0.4f, 0);
+
+            StartCoroutine(ResetPlayerPositionFolder(startPos));
+        }
+
+        // The End
+        if (other.CompareTag("End"))
+        {
+            // TODO replace by END scene
+            SceneManager.LoadScene(gameLostScene, LoadSceneMode.Single);
         }
     }
 
@@ -216,4 +250,84 @@ public class PlayerController : MonoBehaviour
         _livesLayout.cellSize *= heartScaleFactor;
         _hearts.Push(Instantiate(heart, livesUI.transform));
     }
+
+    IEnumerator ResetPlayerPositionDesktop(Vector3 playerPos)
+    {
+        if (!isReseting)
+        {
+            isReseting = true;
+            fadeController.FadeToBlack();
+
+            yield return new WaitForSeconds(0.5f);
+
+            roomManagerScript.NextRoom();
+            // Find all game objects with the "Bullet" tag
+            GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+            GameObject[] hurtBullets = GameObject.FindGameObjectsWithTag("HurtBullet");
+
+            // Loop through the bullets array and destroy each bullet
+            foreach (GameObject bullet in bullets)
+            {
+                Destroy(bullet);
+            }
+            foreach (GameObject bullet in hurtBullets)
+            {
+                Destroy(bullet);
+            }
+
+            transform.position = playerPos;
+            this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+            this.gameObject.transform.localScale = new Vector3(0.45f, 0.45f, 1f);
+            this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
+
+            livesUI.SetActive(false);
+
+            fadeController.FadeToScene();
+
+            yield return new WaitForSeconds(0.5f);
+
+            isMovable = true;
+            isReseting = false;
+            isHidden = true;
+        }
+    }
+
+    IEnumerator ResetPlayerPositionFolder(Vector3 playerPos)
+    {
+        if (!isReseting)
+        {
+            isReseting = true;
+            fadeController.FadeToBlack();
+
+            yield return new WaitForSeconds(0.5f);
+
+            roomManagerScript.NextRoom();
+            // Find all game objects with the "Bullet" tag
+            GameObject[] bullets = GameObject.FindGameObjectsWithTag("Bullet");
+            GameObject[] hurtBullets = GameObject.FindGameObjectsWithTag("HurtBullet");
+
+            // Loop through the bullets array and destroy each bullet
+            foreach (GameObject bullet in bullets)
+            {
+                Destroy(bullet);
+            }
+            foreach (GameObject bullet in hurtBullets)
+            {
+                Destroy(bullet);
+            }
+
+            transform.position = playerPos;
+            this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+            this.gameObject.transform.localScale = new Vector3(0.45f, 0.45f, 1f);
+
+            fadeController.FadeToScene();
+
+            yield return new WaitForSeconds(0.5f);
+
+            isMovable = true;
+            isReseting = false;
+            isHidden = true;
+        }
+    }
+
 }
