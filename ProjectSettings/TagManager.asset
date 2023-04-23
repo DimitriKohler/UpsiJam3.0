@@ -19,6 +19,8 @@ TagManager:
   - Folder
   - End
   - Trash
+  - BottomP
+  - RightP
   layers:
   - Default
   - TransparentFX

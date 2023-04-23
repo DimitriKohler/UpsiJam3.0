@@ -570,9 +570,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.00091242045
+    x: 0
     y: 0
-    width: 1.0018249
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -1190,11 +1190,11 @@ PrefabInstance:
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[1]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: e666ba7f1f8e8784b9058a916f47f828, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: 2e21614aec5e57b4ab7fe8783cb9afff, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[2]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 4ce9f82ec2b2f1c41a75ea0fdc8e8877, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: a2d40bb7e3d951b4e8ca9d16208f0fc2, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[3]
       value: 
