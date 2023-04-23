@@ -570,9 +570,9 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: -0.00091242045
+    x: 0
     y: 0
-    width: 1.0018249
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -889,10 +889,10 @@ RectTransform:
   m_Father: {fileID: 78436930}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000019312, y: 215}
-  m_SizeDelta: {x: 475.066, y: 72.9024}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 215.00005}
+  m_SizeDelta: {x: 0, y: 72.902405}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &788610833
 MonoBehaviour:
@@ -948,8 +948,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1515,8 +1515,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1573,10 +1573,10 @@ RectTransform:
   m_Father: {fileID: 78436930}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36.826614, y: 215}
-  m_SizeDelta: {x: 1199.0933, y: 72.9024}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 214.99998}
+  m_SizeDelta: {x: 0, y: 72.9024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1400912825 stripped
 GameObject:
@@ -2286,6 +2286,22 @@ PrefabInstance:
     - target: {fileID: 2271570629163704684, guid: b85947625feb26540a65025d28e4ab95, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271570629163704686, guid: b85947625feb26540a65025d28e4ab95, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271570629476105758, guid: b85947625feb26540a65025d28e4ab95, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271570629476105758, guid: b85947625feb26540a65025d28e4ab95, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2271570629476105758, guid: b85947625feb26540a65025d28e4ab95, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b85947625feb26540a65025d28e4ab95, type: 3}

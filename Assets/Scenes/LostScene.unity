@@ -420,6 +420,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3148615593896741282, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3148615593896741292, guid: f21d2f2ceb35e48488b76bbde9fa3e78, type: 3}
       propertyPath: m_Name
       value: LostCanvas
