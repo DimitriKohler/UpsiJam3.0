@@ -1251,6 +1251,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6793648967875305894, guid: 23ff99ed8b669c14cb9f9f602a61da18, type: 3}
     - target: {fileID: 5775902609717405518, guid: 51157028e54f8f7458612dd4c4f3d2a2, type: 3}
+      propertyPath: delayFirstShoot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775902609717405518, guid: 51157028e54f8f7458612dd4c4f3d2a2, type: 3}
       propertyPath: timeoutBetweenBullets
       value: 6
       objectReference: {fileID: 0}

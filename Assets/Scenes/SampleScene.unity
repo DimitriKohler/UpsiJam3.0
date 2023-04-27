@@ -1468,14 +1468,14 @@ PrefabInstance:
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[4]
       value: 
-      objectReference: {fileID: 9221800058787518647, guid: 8e576e50b8d587f4295420f6f136148c, type: 3}
+      objectReference: {fileID: 9221800058787518647, guid: cc652ce2d0cd8644aad5b4c2313ac1ca, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: tutoRoomList.Array.data[5]
       value: 
       objectReference: {fileID: 9221800058787518647, guid: d7a0ef8231a6f10459d8afd58871fc42, type: 3}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: lowGlitchRoomList.Array.size
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9075905438036388937, guid: e5e483504be282e479fd5e53e871a3fc, type: 3}
       propertyPath: endgameRoomList.Array.data[0]
